@@ -1,0 +1,504 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="es"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1">&lt;title&gt;Finca Quiros Mora — Plan Estratégico 2026&lt;/title&gt;</p>
+<p class="p1">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"&gt;&lt;/script&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1">*{box-sizing:border-box;margin:0;padding:0}</p>
+<p class="p1">body{font-family:system-ui,sans-serif;color:#1f2937;font-size:13px;line-height:1.6;background:#fff}</p>
+<p class="p1">nav{background:#1b4332;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}</p>
+<p class="p1">nav .logo{color:white;font-size:15px;font-weight:500}</p>
+<p class="p1">nav .nav-links{display:flex;gap:6px;flex-wrap:wrap}</p>
+<p class="p1">nav .nav-links button{background:transparent;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.8);padding:6px 14px;border-radius:8px;font-size:12px;cursor:pointer}</p>
+<p class="p1">nav .nav-links button.active,nav .nav-links button:hover{background:rgba(255,255,255,.15);color:white}</p>
+<p class="p1">.hero{background:linear-gradient(150deg,#1b4332,#2d6a4f,#40916c);padding:56px 32px;text-align:center}</p>
+<p class="p1">.hero h1{font-size:30px;font-weight:500;color:white;margin-bottom:6px}</p>
+<p class="p1">.hero .sub{font-size:12px;color:rgba(255,255,255,.6);letter-spacing:3px;text-transform:uppercase;margin-bottom:20px}</p>
+<p class="p1">.hero .div{width:50px;height:3px;background:#52b788;margin:0 auto 20px}</p>
+<p class="p1">.hero .desc{font-size:15px;color:rgba(255,255,255,.88);max-width:480px;margin:0 auto 24px}</p>
+<p class="p1">.badges{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:8px}</p>
+<p class="p1">.badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:white;padding:4px 14px;border-radius:20px;font-size:11px}</p>
+<p class="p1">.hero-meta{font-size:11px;color:rgba(255,255,255,.45);letter-spacing:1px}</p>
+<p class="p1">.page{display:none;padding:28px 32px;max-width:960px;margin:0 auto}</p>
+<p class="p1">.page.active{display:block}</p>
+<p class="p1">.sec{margin-bottom:32px}</p>
+<p class="p1">.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #e5e7eb}</p>
+<p class="p1">.sec-num{width:32px;height:32px;background:#2d6a4f;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:500;font-size:13px;flex-shrink:0}</p>
+<p class="p1">.sec-title{font-size:16px;font-weight:500}</p>
+<p class="p1">.cards-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:16px}</p>
+<p class="p1">.metric{background:#f9fafb;border-radius:8px;padding:12px 14px}</p>
+<p class="p1">.metric-label{font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px}</p>
+<p class="p1">.metric-value{font-size:18px;font-weight:500;color:#27500A}</p>
+<p class="p1">.metric-sub{font-size:11px;color:#6b7280;margin-top:2px}</p>
+<p class="p1">.insight{background:#EAF3DE;border-left:3px solid #3B6D11;border-radius:0 8px 8px 0;padding:10px 14px;font-size:12px;color:#27500A;margin:12px 0}</p>
+<p class="p1">.warning{background:#FAEEDA;border-left:3px solid #BA7517;border-radius:0 8px 8px 0;padding:10px 14px;font-size:12px;color:#633806;margin:12px 0}</p>
+<p class="p1">.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px;margin-bottom:12px}</p>
+<p class="p1">.card-title{font-size:13px;font-weight:500;margin-bottom:12px}</p>
+<p class="p1">table{width:100%;border-collapse:collapse;margin:12px 0;font-size:12px}</p>
+<p class="p1">th{background:#2d6a4f;color:white;padding:8px 12px;text-align:left;font-weight:500}</p>
+<p class="p1">td{padding:7px 12px;border-bottom:1px solid #e5e7eb}</p>
+<p class="p1">tr:nth-child(even) td{background:#f9fafb}</p>
+<p class="p1">.hl td{background:#EAF3DE !important;font-weight:500;color:#27500A}</p>
+<p class="p1">.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px}</p>
+<p class="p1">.finca-card{display:flex;gap:12px;padding:14px;border-radius:12px;background:#f9fafb;border:1px solid #e5e7eb;margin-bottom:10px}</p>
+<p class="p1">.finca-icon{font-size:24px;flex-shrink:0;margin-top:2px}</p>
+<p class="p1">.finca-nombre{font-weight:500;font-size:13px;color:#2d6a4f;margin-bottom:2px}</p>
+<p class="p1">.finca-loc{font-size:11px;color:#6b7280;margin-bottom:5px}</p>
+<p class="p1">.tags{display:flex;gap:5px;flex-wrap:wrap}</p>
+<p class="p1">.tag{background:#EAF3DE;color:#27500A;padding:2px 10px;border-radius:20px;font-size:11px}</p>
+<p class="p1">.dist-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}</p>
+<p class="p1">.dist-card{border-radius:12px;padding:16px;text-align:center;border:2px solid}</p>
+<p class="p1">.dist-reinv{background:#FAEEDA;border-color:#EF9F27}</p>
+<p class="p1">.dist-fam{background:#EAF3DE;border-color:#3B6D11}</p>
+<p class="p1">.dist-pct{font-size:28px;font-weight:500;margin-bottom:3px}</p>
+<p class="p1">.dist-reinv .dist-pct{color:#633806}</p>
+<p class="p1">.dist-fam .dist-pct{color:#27500A}</p>
+<p class="p1">.dist-label{font-size:12px;font-weight:500;margin-bottom:3px}</p>
+<p class="p1">.dist-monto{font-size:11px;color:#6b7280}</p>
+<p class="p1">.benef-row{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;background:#f9fafb;border:1px solid #e5e7eb;margin-bottom:7px}</p>
+<p class="p1">.avatar{width:34px;height:34px;border-radius:50%;background:#2d6a4f;color:#d8f3dc;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:500;flex-shrink:0}</p>
+<p class="p1">.b-name{flex:1;font-size:12px;font-weight:500}</p>
+<p class="p1">.b-min{font-size:11px;color:#6b7280;font-weight:400}</p>
+<p class="p1">.b-monto{font-weight:500;font-size:13px;color:#27500A;text-align:right}</p>
+<p class="p1">.b-usd{font-size:11px;color:#6b7280}</p>
+<p class="p1">.fase{border:1px solid #e5e7eb;border-radius:12px;margin-bottom:14px;overflow:hidden}</p>
+<p class="p1">.fase-hdr{padding:12px 16px;display:flex;align-items:center;gap:10px}</p>
+<p class="p1">.f1 .fase-hdr{background:#dbeafe}</p>
+<p class="p1">.f2 .fase-hdr{background:#FAEEDA}</p>
+<p class="p1">.f3 .fase-hdr{background:#EAF3DE}</p>
+<p class="p1">.fase-num{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:500;font-size:12px;color:white;flex-shrink:0}</p>
+<p class="p1">.f1 .fase-num{background:#3b82f6}</p>
+<p class="p1">.f2 .fase-num{background:#BA7517}</p>
+<p class="p1">.f3 .fase-num{background:#2d6a4f}</p>
+<p class="p1">.fase-tit{font-weight:500;font-size:13px}</p>
+<p class="p1">.fase-per{font-size:11px;color:#6b7280;margin-left:auto}</p>
+<p class="p1">.fase-body{padding:12px 16px}</p>
+<p class="p1">.paso{display:flex;gap:8px;margin-bottom:8px;align-items:flex-start}</p>
+<p class="p1">.paso-n{width:20px;height:20px;background:#2d6a4f;color:white;border-radius:50%;font-size:10px;font-weight:500;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}</p>
+<p class="p1">.paso p{font-size:12px}</p>
+<p class="p1">.sin-item{display:flex;gap:10px;padding:10px 12px;border-radius:8px;background:#f9fafb;border:1px solid #e5e7eb;margin-bottom:8px}</p>
+<p class="p1">.sin-icon{font-size:18px;flex-shrink:0}</p>
+<p class="p1">.sin-tit{font-weight:500;font-size:12px;margin-bottom:3px}</p>
+<p class="p1">.sin-desc{font-size:12px;color:#6b7280}</p>
+<p class="p1">.ciclo{display:flex;align-items:center;justify-content:space-between;background:#f9fafb;border-radius:12px;padding:14px;margin:12px 0;flex-wrap:wrap;gap:6px}</p>
+<p class="p1">.ciclo-step{text-align:center;flex:1;min-width:70px}</p>
+<p class="p1">.ciclo-icon{font-size:16px;margin-bottom:4px}</p>
+<p class="p1">.ciclo-lbl{font-size:11px;font-weight:500;color:#2d6a4f}</p>
+<p class="p1">.ciclo-sub{font-size:10px;color:#6b7280}</p>
+<p class="p1">.ciclo-arr{color:#52b788;font-size:14px}</p>
+<p class="p1">.camada-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:12px 0}</p>
+<p class="p1">.camada-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:12px;text-align:center}</p>
+<p class="p1">.camada-mes{font-size:15px;font-weight:500;color:#2d6a4f}</p>
+<p class="p1">.camada-lbl{font-size:10px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}</p>
+<p class="p1">.prog-row{display:flex;align-items:center;gap:6px;font-size:10px;margin-bottom:4px;color:#6b7280}</p>
+<p class="p1">.prog-lbl{width:34px}</p>
+<p class="p1">.prog-bar{flex:1;height:5px;background:#e5e7eb;border-radius:3px;overflow:hidden}</p>
+<p class="p1">.prog-fill{height:100%;background:#2d6a4f;border-radius:3px}</p>
+<p class="p1">.prog-val{width:18px;text-align:right}</p>
+<p class="p1">.slider-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}</p>
+<p class="p1">.slider-row label{font-size:12px;color:#6b7280;width:150px;flex-shrink:0}</p>
+<p class="p1">.slider-row input[type=range]{flex:1;accent-color:#2d6a4f}</p>
+<p class="p1">.slider-val{font-size:12px;font-weight:500;min-width:90px;text-align:right}</p>
+<p class="p1">.status-bar{display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:8px;margin:10px 0;font-size:12px}</p>
+<p class="p1">.status-bar.ok{background:#EAF3DE;color:#27500A;border:1px solid #97C459}</p>
+<p class="p1">.status-bar.bad{background:#FCEBEB;color:#791F1F;border:1px solid #F09595}</p>
+<p class="p1">.result-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:10px}</p>
+<p class="p1">.result-card{border-radius:8px;padding:10px;text-align:center}</p>
+<p class="p1">.result-card.bruto{background:#EAF3DE;border:1px solid #97C459}</p>
+<p class="p1">.result-card.fam{background:#E1F5EE;border:1px solid #5DCAA5}</p>
+<p class="p1">.result-card.reinv{background:#FAEEDA;border:1px solid #EF9F27}</p>
+<p class="p1">.result-label{font-size:10px;color:#6b7280;margin-bottom:3px}</p>
+<p class="p1">.result-value{font-size:14px;font-weight:500}</p>
+<p class="p1">.result-card.bruto .result-value{color:#27500A}</p>
+<p class="p1">.result-card.fam .result-value{color:#085041}</p>
+<p class="p1">.result-card.reinv .result-value{color:#633806}</p>
+<p class="p1">.chart-wrap{position:relative;width:100%;margin-top:8px}</p>
+<p class="p1">.legend{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:8px;font-size:11px;color:#6b7280}</p>
+<p class="p1">.legend span{display:flex;align-items:center;gap:4px}</p>
+<p class="p1">.leg-dot{width:9px;height:9px;border-radius:2px;flex-shrink:0}</p>
+<p class="p1">.prog-row-d{display:flex;align-items:center;gap:8px;margin-bottom:7px}</p>
+<p class="p1">.prog-lbl-d{font-size:12px;color:#6b7280;width:90px}</p>
+<p class="p1">.prog-bar-d{flex:1;height:7px;background:#f9fafb;border-radius:4px;overflow:hidden;border:1px solid #e5e7eb}</p>
+<p class="p1">.prog-fill-d{height:100%;border-radius:4px;background:#2d6a4f}</p>
+<p class="p1">.prog-val-d{font-size:12px;font-weight:500;width:60px;text-align:right}</p>
+<p class="p1">.b-status{font-size:11px;font-weight:500;margin-left:4px}</p>
+<p class="p1">.b-status.ok{color:#27500A}</p>
+<p class="p1">.b-status.bad{color:#791F1F}</p>
+<p class="p1">h3{font-size:13px;font-weight:500;margin:14px 0 8px}</p>
+<p class="p1">p{font-size:12px;margin-bottom:10px}</p>
+<p class="p1">.footer{background:#1b4332;color:rgba(255,255,255,.6);text-align:center;padding:20px 32px;font-size:11px;margin-top:40px}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="logo"&gt;🐄 Finca Quiros Mora&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="nav-links"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="active" onclick="showPage('resumen',this)"&gt;Resumen&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="showPage('fincas',this)"&gt;Fincas&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="showPage('precios',this)"&gt;Precios&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="showPage('costos',this)"&gt;Costos&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="showPage('inversion',this)"&gt;Inversión&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="showPage('sinergia',this)"&gt;Sinergia&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="showPage('plan',this)"&gt;Plan&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="showPage('simulador',this)"&gt;Simulador&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1&gt;Finca Quiros Mora&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="sub"&gt;Costa Rica · Plan Estratégico 2026&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="div"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="desc"&gt;Plan estratégico ganadero integral — Proyecto Inversión + Finca Familiar&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="badges"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="badge"&gt;3 Fincas · 65 Hectáreas&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="badge"&gt;Meta: 10 Reses / Mes&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="badge"&gt;₡8.4M Ingreso Bruto&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="badge"&gt;3 Beneficiarios&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="hero-meta"&gt;Francisco Quiroz · Marzo 2026&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- RESUMEN --&gt;</p>
+<p class="p1">&lt;div id="page-resumen" class="page active"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="sec"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sec-header"&gt;&lt;div class="sec-num"&gt;1&lt;/div&gt;&lt;div class="sec-title"&gt;Resumen ejecutivo&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Plan estratégico integral para la &lt;strong&gt;Finca Quiros Mora&lt;/strong&gt;, unificando el Proyecto de Inversión Ganadera (pie de cría y camadas trimestrales) con el negocio de ingresos familiares (venta mensual al carnicero). Ambos negocios operan en sinergia sobre tres fincas con 65 hectáreas.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="cards-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="metric"&gt;&lt;div class="metric-label"&gt;Fincas activas&lt;/div&gt;&lt;div class="metric-value"&gt;3&lt;/div&gt;&lt;div class="metric-sub"&gt;65 hectáreas totales&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="metric"&gt;&lt;div class="metric-label"&gt;Reses actuales&lt;/div&gt;&lt;div class="metric-value"&gt;35&lt;/div&gt;&lt;div class="metric-sub"&gt;15 pie de cría · 20 engorde&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="metric"&gt;&lt;div class="metric-label"&gt;Meta mensual&lt;/div&gt;&lt;div class="metric-value"&gt;10 / mes&lt;/div&gt;&lt;div class="metric-sub"&gt;Reses a vender&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="metric"&gt;&lt;div class="metric-label"&gt;Ingreso bruto meta&lt;/div&gt;&lt;div class="metric-value"&gt;₡8.4M&lt;/div&gt;&lt;div class="metric-sub"&gt;~$16,970 USD&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="metric"&gt;&lt;div class="metric-label"&gt;Para la familia&lt;/div&gt;&lt;div class="metric-value"&gt;₡5.04M&lt;/div&gt;&lt;div class="metric-sub"&gt;60% del ingreso&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="metric"&gt;&lt;div class="metric-label"&gt;Reinversión&lt;/div&gt;&lt;div class="metric-value"&gt;₡3.36M&lt;/div&gt;&lt;div class="metric-sub"&gt;40% del ingreso&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="insight"&gt;&lt;strong&gt;Insight clave:&lt;/strong&gt; Con 8 reses/mes solo se generan ₡4.03M para la familia — insuficiente. La meta real es 10 reses/mes, con lo cual se alcanzan todos los mínimos familiares.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="dist-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="dist-card dist-reinv"&gt;&lt;div class="dist-pct"&gt;40%&lt;/div&gt;&lt;div class="dist-label"&gt;Reinversión&lt;/div&gt;&lt;div class="dist-monto"&gt;₡3,360,000 / mes · ~$6,788&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="dist-card dist-fam"&gt;&lt;div class="dist-pct"&gt;60%&lt;/div&gt;&lt;div class="dist-label"&gt;Familia&lt;/div&gt;&lt;div class="dist-monto"&gt;₡5,040,000 / mes · ~$10,182&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h3&gt;Distribución familiar — 10 reses · precio normal&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="benef-row"&gt;&lt;div class="avatar"&gt;MA&lt;/div&gt;&lt;div class="b-name"&gt;Maynor y Ana&lt;br&gt;&lt;span class="b-min"&gt;Mínimo: ₡3,000,000&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div class="b-monto"&gt;₡3,024,000&lt;/div&gt;&lt;div class="b-usd"&gt;~$6,109 USD ✓&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="benef-row"&gt;&lt;div class="avatar" style="background:#1D9E75"&gt;YU&lt;/div&gt;&lt;div class="b-name"&gt;Yuliana&lt;br&gt;&lt;span class="b-min"&gt;Mínimo: ₡1,000,000&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div class="b-monto"&gt;₡1,008,000&lt;/div&gt;&lt;div class="b-usd"&gt;~$2,036 USD ✓&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="benef-row"&gt;&lt;div class="avatar" style="background:#5DCAA5;color:#04342C"&gt;FQ&lt;/div&gt;&lt;div class="b-name"&gt;Francisco Quiroz&lt;br&gt;&lt;span class="b-min"&gt;Mínimo: ₡1,000,000&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div class="b-monto"&gt;₡1,008,000&lt;/div&gt;&lt;div class="b-usd"&gt;~$2,036 USD ✓&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- FINCAS --&gt;</p>
+<p class="p1">&lt;div id="page-fincas" class="page"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="sec"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sec-header"&gt;&lt;div class="sec-num"&gt;2&lt;/div&gt;&lt;div class="sec-title"&gt;Inventario de fincas y asignación&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="finca-card"&gt;&lt;div class="finca-icon"&gt;🌾&lt;/div&gt;&lt;div&gt;&lt;div class="finca-nombre"&gt;Finca 1 — Sardinal&lt;/div&gt;&lt;div class="finca-loc"&gt;Sardinal · 33 hectáreas&lt;/div&gt;&lt;div class="tags"&gt;&lt;span class="tag"&gt;Engorde extensivo principal&lt;/span&gt;&lt;span class="tag"&gt;33 hec pastoreo&lt;/span&gt;&lt;span class="tag"&gt;Hasta 66 reses con pasto mejorado&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="finca-card"&gt;&lt;div class="finca-icon"&gt;🏠&lt;/div&gt;&lt;div&gt;&lt;div class="finca-nombre"&gt;Finca 2 — Puriscal&lt;/div&gt;&lt;div class="finca-loc"&gt;Puriscal · 2 hectáreas · Estabulado&lt;/div&gt;&lt;div class="tags"&gt;&lt;span class="tag"&gt;Engorde final intensivo&lt;/span&gt;&lt;span class="tag"&gt;Últimos 60 días antes de venta&lt;/span&gt;&lt;span class="tag"&gt;Alta conversión&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="finca-card"&gt;&lt;div class="finca-icon"&gt;🌿&lt;/div&gt;&lt;div&gt;&lt;div class="finca-nombre"&gt;Finca 3 — La Gloria&lt;/div&gt;&lt;div class="finca-loc"&gt;La Gloria · 30 hectáreas&lt;/div&gt;&lt;div class="tags"&gt;&lt;span class="tag"&gt;Pastoreo y crecimiento&lt;/span&gt;&lt;span class="tag"&gt;10 reses proyecto inversión activas&lt;/span&gt;&lt;span class="tag"&gt;Pie de cría&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;th&gt;Finca&lt;/th&gt;&lt;th&gt;Hectáreas&lt;/th&gt;&lt;th&gt;Pasto natural&lt;/th&gt;&lt;th&gt;Pasto mejorado&lt;/th&gt;&lt;th&gt;Función&lt;/th&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Sardinal&lt;/td&gt;&lt;td&gt;33 ha&lt;/td&gt;&lt;td&gt;33 reses&lt;/td&gt;&lt;td&gt;66 reses&lt;/td&gt;&lt;td&gt;Engorde extensivo&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Puriscal&lt;/td&gt;&lt;td&gt;2 ha&lt;/td&gt;&lt;td&gt;Estabulado&lt;/td&gt;&lt;td&gt;15–20 rotativas&lt;/td&gt;&lt;td&gt;Engorde final 60 días&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;La Gloria&lt;/td&gt;&lt;td&gt;30 ha&lt;/td&gt;&lt;td&gt;30 reses&lt;/td&gt;&lt;td&gt;60 reses&lt;/td&gt;&lt;td&gt;Pastoreo / pie de cría&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr class="hl"&gt;&lt;td&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;65 ha&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;63 reses&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;126 reses&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;✅ Capacidad suficiente&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="two-col" style="margin-top:14px"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card"&gt;&lt;div class="card-title"&gt;Capacidad por finca&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="prog-row-d"&gt;&lt;span class="prog-lbl-d"&gt;Sardinal&lt;/span&gt;&lt;div class="prog-bar-d"&gt;&lt;div class="prog-fill-d" style="width:51%"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="prog-val-d"&gt;33 ha&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="prog-row-d"&gt;&lt;span class="prog-lbl-d"&gt;La Gloria&lt;/span&gt;&lt;div class="prog-bar-d"&gt;&lt;div class="prog-fill-d" style="width:46%;background:#1D9E75"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="prog-val-d"&gt;30 ha&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="prog-row-d"&gt;&lt;span class="prog-lbl-d"&gt;Puriscal&lt;/span&gt;&lt;div class="prog-bar-d"&gt;&lt;div class="prog-fill-d" style="width:3%;background:#5DCAA5"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="prog-val-d"&gt;2 ha&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card"&gt;&lt;div class="card-title"&gt;Reses actuales&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="prog-row-d"&gt;&lt;span class="prog-lbl-d"&gt;Pie de cría&lt;/span&gt;&lt;div class="prog-bar-d"&gt;&lt;div class="prog-fill-d" style="width:43%"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="prog-val-d"&gt;15 reses&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="prog-row-d"&gt;&lt;span class="prog-lbl-d"&gt;Engorde&lt;/span&gt;&lt;div class="prog-bar-d"&gt;&lt;div class="prog-fill-d" style="width:57%;background:#BA7517"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="prog-val-d"&gt;20 reses&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="prog-row-d"&gt;&lt;span class="prog-lbl-d"&gt;Inversión&lt;/span&gt;&lt;div class="prog-bar-d"&gt;&lt;div class="prog-fill-d" style="width:29%;background:#5DCAA5"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="prog-val-d"&gt;10 reses&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- PRECIOS --&gt;</p>
+<p class="p1">&lt;div id="page-precios" class="page"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="sec"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sec-header"&gt;&lt;div class="sec-num"&gt;3&lt;/div&gt;&lt;div class="sec-title"&gt;Estructura de precios y proyección de ingresos&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="font-size:11px;color:#6b7280"&gt;Tipo de cambio: ₡495 por $1 USD (promedio últimos 3 meses, Costa Rica)&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;th&gt;Escenario&lt;/th&gt;&lt;th&gt;Precio por res (₡)&lt;/th&gt;&lt;th&gt;Precio por res (USD)&lt;/th&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Conservador&lt;/td&gt;&lt;td&gt;₡798,000&lt;/td&gt;&lt;td&gt;~$1,612&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr class="hl"&gt;&lt;td&gt;Normal (base)&lt;/td&gt;&lt;td&gt;₡840,000&lt;/td&gt;&lt;td&gt;~$1,697&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Optimista&lt;/td&gt;&lt;td&gt;₡889,000&lt;/td&gt;&lt;td&gt;~$1,796&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;th&gt;Reses/mes&lt;/th&gt;&lt;th&gt;Conservador&lt;/th&gt;&lt;th&gt;Normal&lt;/th&gt;&lt;th&gt;Optimista&lt;/th&gt;&lt;th&gt;60% familia&lt;/th&gt;&lt;th&gt;¿Alcanza?&lt;/th&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;8 reses&lt;/td&gt;&lt;td&gt;₡6,384,000&lt;/td&gt;&lt;td&gt;₡6,720,000&lt;/td&gt;&lt;td&gt;₡7,112,000&lt;/td&gt;&lt;td&gt;₡4,032,000&lt;/td&gt;&lt;td&gt;❌ No&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;9 reses&lt;/td&gt;&lt;td&gt;₡7,182,000&lt;/td&gt;&lt;td&gt;₡7,560,000&lt;/td&gt;&lt;td&gt;₡8,001,000&lt;/td&gt;&lt;td&gt;₡4,536,000&lt;/td&gt;&lt;td&gt;❌ Falta ₡464K&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr class="hl"&gt;&lt;td&gt;&lt;strong&gt;10 reses ✅&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;₡7,980,000&lt;/td&gt;&lt;td&gt;₡8,400,000&lt;/td&gt;&lt;td&gt;₡8,890,000&lt;/td&gt;&lt;td&gt;₡5,040,000&lt;/td&gt;&lt;td&gt;&lt;strong&gt;✅ Sí&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;11 reses&lt;/td&gt;&lt;td&gt;₡8,778,000&lt;/td&gt;&lt;td&gt;₡9,240,000&lt;/td&gt;&lt;td&gt;₡9,779,000&lt;/td&gt;&lt;td&gt;₡5,544,000&lt;/td&gt;&lt;td&gt;✅ Holgura&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="legend"&gt;&lt;span&gt;&lt;span class="leg-dot" style="background:#97C459"&gt;&lt;/span&gt;Conservador&lt;/span&gt;&lt;span&gt;&lt;span class="leg-dot" style="background:#2d6a4f"&gt;&lt;/span&gt;Normal&lt;/span&gt;&lt;span&gt;&lt;span class="leg-dot" style="background:#1D9E75"&gt;&lt;/span&gt;Optimista&lt;/span&gt;&lt;span&gt;&lt;span class="leg-dot" style="background:#E24B4A"&gt;&lt;/span&gt;Meta ₡5M&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="chart-wrap" style="height:240px"&gt;&lt;canvas id="chart-precios"&gt;&lt;/canvas&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- COSTOS --&gt;</p>
+<p class="p1">&lt;div id="page-costos" class="page"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="sec"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sec-header"&gt;&lt;div class="sec-num"&gt;4&lt;/div&gt;&lt;div class="sec-title"&gt;Costos operativos estimados&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;th&gt;Categoría&lt;/th&gt;&lt;th&gt;Concepto&lt;/th&gt;&lt;th&gt;Mensual (₡)&lt;/th&gt;&lt;th&gt;Mensual (USD)&lt;/th&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td style="color:#2d6a4f;font-weight:500" rowspan="3"&gt;Alimentación&lt;/td&gt;&lt;td&gt;Suplemento mineral (45 reses)&lt;/td&gt;&lt;td&gt;₡180,000&lt;/td&gt;&lt;td&gt;~$364&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Concentrado engorde — Puriscal&lt;/td&gt;&lt;td&gt;₡420,000&lt;/td&gt;&lt;td&gt;~$848&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Mantenimiento y mejora de pastos&lt;/td&gt;&lt;td&gt;₡150,000&lt;/td&gt;&lt;td&gt;~$303&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td style="color:#2d6a4f;font-weight:500" rowspan="3"&gt;Sanidad&lt;/td&gt;&lt;td&gt;Vacunas, desparasitación, vitaminas&lt;/td&gt;&lt;td&gt;₡120,000&lt;/td&gt;&lt;td&gt;~$242&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Visita veterinaria mensual&lt;/td&gt;&lt;td&gt;₡80,000&lt;/td&gt;&lt;td&gt;~$162&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Medicamentos e imprevistos&lt;/td&gt;&lt;td&gt;₡60,000&lt;/td&gt;&lt;td&gt;~$121&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td style="color:#2d6a4f;font-weight:500" rowspan="2"&gt;Mano de obra&lt;/td&gt;&lt;td&gt;Peón finca (tiempo completo)&lt;/td&gt;&lt;td&gt;₡380,000&lt;/td&gt;&lt;td&gt;~$768&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Apoyo ocasional&lt;/td&gt;&lt;td&gt;₡80,000&lt;/td&gt;&lt;td&gt;~$162&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td style="color:#2d6a4f;font-weight:500" rowspan="2"&gt;Logística&lt;/td&gt;&lt;td&gt;Transporte reses al carnicero&lt;/td&gt;&lt;td&gt;₡150,000&lt;/td&gt;&lt;td&gt;~$303&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Combustible y movilización&lt;/td&gt;&lt;td&gt;₡80,000&lt;/td&gt;&lt;td&gt;~$162&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td style="color:#2d6a4f;font-weight:500" rowspan="2"&gt;Infraestructura&lt;/td&gt;&lt;td&gt;Mantenimiento cercas y equipos&lt;/td&gt;&lt;td&gt;₡60,000&lt;/td&gt;&lt;td&gt;~$121&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Servicios (agua, electricidad)&lt;/td&gt;&lt;td&gt;₡40,000&lt;/td&gt;&lt;td&gt;~$81&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr class="hl"&gt;&lt;td colspan="2"&gt;&lt;strong&gt;Total costos operativos&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;₡1,800,000&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;~$3,636&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;th&gt;Concepto&lt;/th&gt;&lt;th&gt;En Colones (₡)&lt;/th&gt;&lt;th&gt;En USD&lt;/th&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Ingreso bruto&lt;/td&gt;&lt;td&gt;₡8,400,000&lt;/td&gt;&lt;td&gt;~$16,970&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;40% reinversión&lt;/td&gt;&lt;td&gt;₡3,360,000&lt;/td&gt;&lt;td&gt;~$6,788&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Costos operativos (desde reinversión)&lt;/td&gt;&lt;td&gt;-₡1,800,000&lt;/td&gt;&lt;td&gt;~-$3,636&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Reinversión libre para novillos&lt;/td&gt;&lt;td&gt;₡1,560,000&lt;/td&gt;&lt;td&gt;~$3,152&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr class="hl"&gt;&lt;td&gt;&lt;strong&gt;60% familia (bruto)&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;₡5,040,000&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;~$10,182&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="warning"&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Los costos operativos se cubren desde el fondo de reinversión, dejando ₡1,560,000 libres para compra de novillos.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- INVERSIÓN --&gt;</p>
+<p class="p1">&lt;div id="page-inversion" class="page"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="sec"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sec-header"&gt;&lt;div class="sec-num"&gt;5&lt;/div&gt;&lt;div class="sec-title"&gt;Proyecto de inversión — camadas trimestrales&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;4 camadas al año (marzo, junio, septiembre, diciembre), creciendo hasta 30 cabezas por camada.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="camada-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="camada-card"&gt;&lt;div class="camada-mes"&gt;MAR&lt;/div&gt;&lt;div class="camada-lbl"&gt;Camada 1&lt;/div&gt;&lt;div class="prog-row"&gt;&lt;span class="prog-lbl"&gt;Año 1&lt;/span&gt;&lt;div class="prog-bar"&gt;&lt;div class="prog-fill" style="width:23%"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="prog-val"&gt;7&lt;/span&gt;&lt;/div&gt;&lt;div class="prog-row"&gt;&lt;span class="prog-lbl"&gt;Año 2&lt;/span&gt;&lt;div class="prog-bar"&gt;&lt;div class="prog-fill" style="width:50%"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="prog-val"&gt;15&lt;/span&gt;&lt;/div&gt;&lt;div class="prog-row"&gt;&lt;span class="prog-lbl"&gt;Año 3&lt;/span&gt;&lt;div class="prog-bar"&gt;&lt;div class="prog-fill" style="width:83%"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="prog-val"&gt;25&lt;/span&gt;&lt;/div&gt;&lt;div class="prog-row"&gt;&lt;span class="prog-lbl"&gt;Año 4+&lt;/span&gt;&lt;div class="prog-bar"&gt;&lt;div class="prog-fill" style="width:100%"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="prog-val"&gt;30&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="camada-card"&gt;&lt;div class="camada-mes"&gt;JUN&lt;/div&gt;&lt;div class="camada-lbl"&gt;Camada 2&lt;/div&gt;&lt;div class="prog-row"&gt;&lt;span class="prog-lbl"&gt;Año 1&lt;/span&gt;&lt;div class="prog-bar"&gt;&lt;div class="prog-fill" style="width:23%"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="prog-val"&gt;7&lt;/span&gt;&lt;/div&gt;&lt;div class="prog-row"&gt;&lt;span class="prog-lbl"&gt;Año 2&lt;/span&gt;&lt;div class="prog-bar"&gt;&lt;div class="prog-fill" style="width:50%"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="prog-val"&gt;15&lt;/span&gt;&lt;/div&gt;&lt;div class="prog-row"&gt;&lt;span class="prog-lbl"&gt;Año 3&lt;/span&gt;&lt;div class="prog-bar"&gt;&lt;div class="prog-fill" style="width:83%"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="prog-val"&gt;25&lt;/span&gt;&lt;/div&gt;&lt;div class="prog-row"&gt;&lt;span class="prog-lbl"&gt;Año 4+&lt;/span&gt;&lt;div class="prog-bar"&gt;&lt;div class="prog-fill" style="width:100%"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="prog-val"&gt;30&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="camada-card"&gt;&lt;div class="camada-mes"&gt;SEP&lt;/div&gt;&lt;div class="camada-lbl"&gt;Camada 3&lt;/div&gt;&lt;div class="prog-row"&gt;&lt;span class="prog-lbl"&gt;Año 1&lt;/span&gt;&lt;div class="prog-bar"&gt;&lt;div class="prog-fill" style="width:23%"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="prog-val"&gt;7&lt;/span&gt;&lt;/div&gt;&lt;div class="prog-row"&gt;&lt;span class="prog-lbl"&gt;Año 2&lt;/span&gt;&lt;div class="prog-bar"&gt;&lt;div class="prog-fill" style="width:50%"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="prog-val"&gt;15&lt;/span&gt;&lt;/div&gt;&lt;div class="prog-row"&gt;&lt;span class="prog-lbl"&gt;Año 3&lt;/span&gt;&lt;div class="prog-bar"&gt;&lt;div class="prog-fill" style="width:83%"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="prog-val"&gt;25&lt;/span&gt;&lt;/div&gt;&lt;div class="prog-row"&gt;&lt;span class="prog-lbl"&gt;Año 4+&lt;/span&gt;&lt;div class="prog-bar"&gt;&lt;div class="prog-fill" style="width:100%"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="prog-val"&gt;30&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="camada-card"&gt;&lt;div class="camada-mes"&gt;DIC&lt;/div&gt;&lt;div class="camada-lbl"&gt;Camada 4&lt;/div&gt;&lt;div class="prog-row"&gt;&lt;span class="prog-lbl"&gt;Año 1&lt;/span&gt;&lt;div class="prog-bar"&gt;&lt;div class="prog-fill" style="width:23%"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="prog-val"&gt;7&lt;/span&gt;&lt;/div&gt;&lt;div class="prog-row"&gt;&lt;span class="prog-lbl"&gt;Año 2&lt;/span&gt;&lt;div class="prog-bar"&gt;&lt;div class="prog-fill" style="width:50%"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="prog-val"&gt;15&lt;/span&gt;&lt;/div&gt;&lt;div class="prog-row"&gt;&lt;span class="prog-lbl"&gt;Año 3&lt;/span&gt;&lt;div class="prog-bar"&gt;&lt;div class="prog-fill" style="width:83%"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="prog-val"&gt;25&lt;/span&gt;&lt;/div&gt;&lt;div class="prog-row"&gt;&lt;span class="prog-lbl"&gt;Año 4+&lt;/span&gt;&lt;div class="prog-bar"&gt;&lt;div class="prog-fill" style="width:100%"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="prog-val"&gt;30&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;th&gt;Año&lt;/th&gt;&lt;th&gt;Cabezas/camada&lt;/th&gt;&lt;th&gt;Total 4 camadas&lt;/th&gt;&lt;th&gt;Para Finca QM&lt;/th&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Año 1&lt;/td&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;28&lt;/td&gt;&lt;td&gt;~10–14 novillos&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Año 2&lt;/td&gt;&lt;td&gt;15&lt;/td&gt;&lt;td&gt;60&lt;/td&gt;&lt;td&gt;~25–30 novillos&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Año 3&lt;/td&gt;&lt;td&gt;25&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td&gt;~40–50 novillos&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr class="hl"&gt;&lt;td&gt;Año 4+&lt;/td&gt;&lt;td&gt;30&lt;/td&gt;&lt;td&gt;120&lt;/td&gt;&lt;td&gt;✅ Autoabastecimiento total&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="insight"&gt;&lt;strong&gt;Sinergia clave:&lt;/strong&gt; A partir del Año 2 el proyecto provee suficientes novillos para que la Finca QM no necesite comprar en el mercado externo.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="legend" style="margin-top:14px"&gt;&lt;span&gt;&lt;span class="leg-dot" style="background:#3B6D11"&gt;&lt;/span&gt;Familia anual&lt;/span&gt;&lt;span&gt;&lt;span class="leg-dot" style="background:#BA7517"&gt;&lt;/span&gt;Reinversión anual&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="chart-wrap" style="height:240px"&gt;&lt;canvas id="chart-inversion"&gt;&lt;/canvas&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- SINERGIA --&gt;</p>
+<p class="p1">&lt;div id="page-sinergia" class="page"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="sec"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sec-header"&gt;&lt;div class="sec-num"&gt;6&lt;/div&gt;&lt;div class="sec-title"&gt;Sinergia entre ambos negocios&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sin-item"&gt;&lt;div class="sin-icon"&gt;🐣&lt;/div&gt;&lt;div&gt;&lt;div class="sin-tit"&gt;Pie de cría → suministro sin costo externo&lt;/div&gt;&lt;div class="sin-desc"&gt;Las 15 reses de pie de cría generan crías que pasan directamente al ciclo de engorde. A partir del Año 2 se elimina la compra externa.&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sin-item"&gt;&lt;div class="sin-icon"&gt;🌾&lt;/div&gt;&lt;div&gt;&lt;div class="sin-tit"&gt;Infraestructura compartida — 3 fincas, 65 hectáreas&lt;/div&gt;&lt;div class="sin-desc"&gt;La Gloria aloja pie de cría; Sardinal concentra el engorde extensivo; Puriscal da el toque final estabulado antes de venta.&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sin-item"&gt;&lt;div class="sin-icon"&gt;💰&lt;/div&gt;&lt;div&gt;&lt;div class="sin-tit"&gt;Reinversión del 40% alimenta ambos negocios&lt;/div&gt;&lt;div class="sin-desc"&gt;Los ₡3,360,000 mensuales se destinan a compra de novillos, mejora de pastos y expansión del pie de cría simultáneamente.&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sin-item"&gt;&lt;div class="sin-icon"&gt;🤝&lt;/div&gt;&lt;div&gt;&lt;div class="sin-tit"&gt;Poder de negociación con el carnicero&lt;/div&gt;&lt;div class="sin-desc"&gt;10 reses/mes garantizadas permiten negociar contrato estable y eliminar la volatilidad del mercado spot.&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h3&gt;Ciclo integral unificado&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="ciclo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ciclo-step"&gt;&lt;div class="ciclo-icon"&gt;🐄&lt;/div&gt;&lt;div class="ciclo-lbl"&gt;Pie de cría&lt;/div&gt;&lt;div class="ciclo-sub"&gt;La Gloria&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ciclo-arr"&gt;→&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ciclo-step"&gt;&lt;div class="ciclo-icon"&gt;🐮&lt;/div&gt;&lt;div class="ciclo-lbl"&gt;Cría/novillo&lt;/div&gt;&lt;div class="ciclo-sub"&gt;Nace en finca&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ciclo-arr"&gt;→&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ciclo-step"&gt;&lt;div class="ciclo-icon"&gt;🌾&lt;/div&gt;&lt;div class="ciclo-lbl"&gt;Engorde pasto&lt;/div&gt;&lt;div class="ciclo-sub"&gt;4–5 meses · Sardinal&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ciclo-arr"&gt;→&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ciclo-step"&gt;&lt;div class="ciclo-icon"&gt;🏠&lt;/div&gt;&lt;div class="ciclo-lbl"&gt;Engorde final&lt;/div&gt;&lt;div class="ciclo-sub"&gt;60 días · Puriscal&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ciclo-arr"&gt;→&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ciclo-step"&gt;&lt;div class="ciclo-icon"&gt;🔪&lt;/div&gt;&lt;div class="ciclo-lbl"&gt;Venta&lt;/div&gt;&lt;div class="ciclo-sub"&gt;420–450 kg&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ciclo-arr"&gt;→&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ciclo-step"&gt;&lt;div class="ciclo-icon"&gt;💵&lt;/div&gt;&lt;div class="ciclo-lbl"&gt;Ingreso&lt;/div&gt;&lt;div class="ciclo-sub"&gt;60% familia · 40% reinv.&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- PLAN --&gt;</p>
+<p class="p1">&lt;div id="page-plan" class="page"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="sec"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sec-header"&gt;&lt;div class="sec-num"&gt;7&lt;/div&gt;&lt;div class="sec-title"&gt;Plan de acción paso a paso&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="fase f1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="fase-hdr"&gt;&lt;div class="fase-num"&gt;1&lt;/div&gt;&lt;div class="fase-tit"&gt;Fase 1 — Ordenar y estructurar&lt;/div&gt;&lt;div class="fase-per"&gt;Mar – Abr 2026&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="fase-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="paso"&gt;&lt;div class="paso-n"&gt;1&lt;/div&gt;&lt;p&gt;Separar las &lt;strong&gt;15 reses de pie de cría&lt;/strong&gt; de las &lt;strong&gt;20 disponibles&lt;/strong&gt; para engorde. Identificar con aretes.&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="paso"&gt;&lt;div class="paso-n"&gt;2&lt;/div&gt;&lt;p&gt;Asignar roles: Sardinal = engorde extensivo · La Gloria = pie de cría + pastoreo · Puriscal = engorde final 60 días.&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="paso"&gt;&lt;div class="paso-n"&gt;3&lt;/div&gt;&lt;p&gt;Pesar y clasificar las 20 reses: "listas ya" (≥400 kg) vs. "necesitan 2–4 meses más".&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="paso"&gt;&lt;div class="paso-n"&gt;4&lt;/div&gt;&lt;p&gt;Negociar con al menos 2 carniceros. Objetivo: &lt;strong&gt;contrato fijo de 10 reses/mes a ₡840,000&lt;/strong&gt;.&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="paso"&gt;&lt;div class="paso-n"&gt;5&lt;/div&gt;&lt;p&gt;Crear registro por animal: arete, peso inicial, finca, fecha ingreso, fase actual.&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="fase f2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="fase-hdr"&gt;&lt;div class="fase-num"&gt;2&lt;/div&gt;&lt;div class="fase-tit"&gt;Fase 2 — Primeras ventas y construcción del hato&lt;/div&gt;&lt;div class="fase-per"&gt;May – Ago 2026&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="fase-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="paso"&gt;&lt;div class="paso-n"&gt;6&lt;/div&gt;&lt;p&gt;Vender las primeras reses listas (3–5). &lt;strong&gt;Primer ingreso real a Maynor y Ana, Yuliana y Francisco.&lt;/strong&gt;&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="paso"&gt;&lt;div class="paso-n"&gt;7&lt;/div&gt;&lt;p&gt;Con el 40% de reinversión, comprar &lt;strong&gt;20–25 novillos flacos&lt;/strong&gt; (180–250 kg) para completar el ciclo.&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="paso"&gt;&lt;div class="paso-n"&gt;8&lt;/div&gt;&lt;p&gt;Iniciar mejora de pastos en Sardinal con &lt;strong&gt;semilla Brizantha o Brachiaria&lt;/strong&gt; para duplicar capacidad.&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="paso"&gt;&lt;div class="paso-n"&gt;9&lt;/div&gt;&lt;p&gt;Establecer ciclo Sardinal (4–5 meses pasto) → Puriscal (60 días estabulado) → venta.&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="paso"&gt;&lt;div class="paso-n"&gt;10&lt;/div&gt;&lt;p&gt;Primera camada de marzo 2026 (7 cabezas) pasa al ciclo de engorde en el segundo semestre.&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="fase f3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="fase-hdr"&gt;&lt;div class="fase-num"&gt;3&lt;/div&gt;&lt;div class="fase-tit"&gt;Fase 3 — Velocidad crucero&lt;/div&gt;&lt;div class="fase-per"&gt;Sep 2026 en adelante&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="fase-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="paso"&gt;&lt;div class="paso-n"&gt;11&lt;/div&gt;&lt;p&gt;Mantener &lt;strong&gt;45 reses en ciclo rotativo&lt;/strong&gt; divididas en las tres fases de engorde.&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="paso"&gt;&lt;div class="paso-n"&gt;12&lt;/div&gt;&lt;p&gt;&lt;strong&gt;10 salidas = 10 entradas por mes.&lt;/strong&gt; Cada res vendida se reemplaza inmediatamente.&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="paso"&gt;&lt;div class="paso-n"&gt;13&lt;/div&gt;&lt;p&gt;Distribución mensual: &lt;strong&gt;Maynor y Ana ₡3,024,000 · Yuliana ₡1,008,000 · Francisco ₡1,008,000.&lt;/strong&gt;&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="paso"&gt;&lt;div class="paso-n"&gt;14&lt;/div&gt;&lt;p&gt;Revisión semestral de precios con el carnicero. Desde Año 2, camadas eliminan compra externa.&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="paso"&gt;&lt;div class="paso-n"&gt;15&lt;/div&gt;&lt;p&gt;Meta a Año 4: escalar a &lt;strong&gt;12–15 reses/mes&lt;/strong&gt; con camadas en pleno funcionamiento.&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- SIMULADOR --&gt;</p>
+<p class="p1">&lt;div id="page-simulador" class="page"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="sec"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sec-header"&gt;&lt;div class="sec-num"&gt;8&lt;/div&gt;&lt;div class="sec-title"&gt;Simulador interactivo de ingresos&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="cards-grid" style="grid-template-columns:repeat(4,minmax(0,1fr))"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="metric"&gt;&lt;div class="metric-label"&gt;Ingreso bruto&lt;/div&gt;&lt;div class="metric-value" id="s-bruto"&gt;₡8,400,000&lt;/div&gt;&lt;div class="metric-sub" id="s-bruto-usd"&gt;~$16,970&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="metric"&gt;&lt;div class="metric-label"&gt;Para familia (60%)&lt;/div&gt;&lt;div class="metric-value" id="s-fam"&gt;₡5,040,000&lt;/div&gt;&lt;div class="metric-sub" id="s-fam-usd"&gt;~$10,182&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="metric"&gt;&lt;div class="metric-label"&gt;Reinversión (40%)&lt;/div&gt;&lt;div class="metric-value" style="color:#633806" id="s-reinv"&gt;₡3,360,000&lt;/div&gt;&lt;div class="metric-sub" id="s-reinv-usd"&gt;~$6,788&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="metric"&gt;&lt;div class="metric-label"&gt;Reinversión libre&lt;/div&gt;&lt;div class="metric-value" id="s-libre"&gt;₡1,560,000&lt;/div&gt;&lt;div class="metric-sub" id="s-libre-usd"&gt;~$3,152&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card-title"&gt;Controles&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="slider-row"&gt;&lt;label&gt;Reses por mes&lt;/label&gt;&lt;input type="range" min="1" max="20" value="10" step="1" id="sl-reses" oninput="calcSim()"&gt;&lt;span class="slider-val" id="out-reses"&gt;10 reses&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="slider-row"&gt;&lt;label&gt;Precio por res (₡)&lt;/label&gt;&lt;input type="range" min="700000" max="1000000" value="840000" step="1000" id="sl-precio" oninput="calcSim()"&gt;&lt;span class="slider-val" id="out-precio"&gt;₡840,000&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="slider-row"&gt;&lt;label&gt;% Reinversión&lt;/label&gt;&lt;input type="range" min="10" max="60" value="40" step="5" id="sl-reinv" oninput="calcSim()"&gt;&lt;span class="slider-val" id="out-reinv"&gt;40%&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="slider-row"&gt;&lt;label&gt;Costos operativos (₡)&lt;/label&gt;&lt;input type="range" min="500000" max="4000000" value="1800000" step="50000" id="sl-costos" oninput="calcSim()"&gt;&lt;span class="slider-val" id="out-costos"&gt;₡1,800,000&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="sim-status" class="status-bar ok"&gt;Meta familiar alcanzada ✓ — todos los mínimos cubiertos&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="result-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="result-card bruto"&gt;&lt;div class="result-label"&gt;Ingreso bruto&lt;/div&gt;&lt;div class="result-value" id="r-bruto"&gt;₡8,400,000&lt;/div&gt;&lt;div style="font-size:11px;color:#6b7280" id="r-bruto-usd"&gt;~$16,970&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="result-card fam"&gt;&lt;div class="result-label"&gt;Para familia&lt;/div&gt;&lt;div class="result-value" id="r-fam"&gt;₡5,040,000&lt;/div&gt;&lt;div style="font-size:11px;color:#6b7280" id="r-fam-usd"&gt;~$10,182&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="result-card reinv"&gt;&lt;div class="result-label"&gt;Reinversión&lt;/div&gt;&lt;div class="result-value" id="r-reinv"&gt;₡3,360,000&lt;/div&gt;&lt;div style="font-size:11px;color:#6b7280" id="r-reinv-usd"&gt;~$6,788&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h3&gt;Distribución familiar en tiempo real&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="benef-sim"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="legend" style="margin-top:14px"&gt;&lt;span&gt;&lt;span class="leg-dot" style="background:#3B6D11"&gt;&lt;/span&gt;Familia&lt;/span&gt;&lt;span&gt;&lt;span class="leg-dot" style="background:#BA7517"&gt;&lt;/span&gt;Reinversión&lt;/span&gt;&lt;span&gt;&lt;span class="leg-dot" style="background:#E24B4A"&gt;&lt;/span&gt;Meta ₡5M&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="chart-wrap" style="height:240px"&gt;&lt;canvas id="chart-sim"&gt;&lt;/canvas&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="footer"&gt;Finca Quiros Mora · Plan Estratégico Ganadero · Marzo 2026 · Francisco Quiroz&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">const TC=495;</p>
+<p class="p1">const MINS={ma:3000000,yu:1000000,fq:1000000};</p>
+<p class="p1">function fmt(n){return '₡'+Math.round(n).toLocaleString('es-CR')}</p>
+<p class="p1">function fmtU(n){return '~$'+Math.round(n/TC).toLocaleString('es-CR')}</p>
+<p class="p1">let charts={};</p>
+<p class="p2"><br></p>
+<p class="p1">function showPage(id,btn){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll('.page').forEach(p=&gt;p.classList.remove('active'));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll('.nav-links button').forEach(b=&gt;b.classList.remove('active'));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('page-'+id).classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(btn) btn.classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(id==='precios') initPrecios();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(id==='inversion') initInversion();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(id==='simulador') calcSim();</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function initPrecios(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(charts.precios) return;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const r=[6,7,8,9,10,11,12];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>charts.precios=new Chart(document.getElementById('chart-precios'),{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>type:'line',</p>
+<p class="p1"><span class="Apple-converted-space">    </span>data:{labels:r.map(x=&gt;x+' reses'),datasets:[</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{label:'Conservador',data:r.map(x=&gt;Math.round(x*798000*0.6)),borderColor:'#97C459',backgroundColor:'transparent',borderWidth:2,pointRadius:3},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{label:'Normal',data:r.map(x=&gt;Math.round(x*840000*0.6)),borderColor:'#2d6a4f',backgroundColor:'transparent',borderWidth:2,pointRadius:3},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{label:'Optimista',data:r.map(x=&gt;Math.round(x*889000*0.6)),borderColor:'#1D9E75',backgroundColor:'transparent',borderWidth:2,pointRadius:3},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{label:'Meta',data:r.map(()=&gt;5000000),borderColor:'#E24B4A',backgroundColor:'transparent',borderWidth:1.5,pointRadius:0,borderDash:[4,4]}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>]},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=&gt;c.dataset.label+': '+fmt(c.raw)}}},scales:{y:{ticks:{callback:v=&gt;'₡'+Math.round(v/1000000)+'M'}},x:{ticks:{autoSkip:false}}}}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function initInversion(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(charts.inversion) return;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const years=['Año 1','Año 2','Año 3','Año 4','Año 5'];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const reses=[5,7,9,10,10];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>charts.inversion=new Chart(document.getElementById('chart-inversion'),{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>type:'bar',</p>
+<p class="p1"><span class="Apple-converted-space">    </span>data:{labels:years,datasets:[</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{label:'Familia',data:reses.map(r=&gt;Math.round(r*840000*12*0.6)),backgroundColor:'#3B6D11',stack:'s'},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{label:'Reinversión',data:reses.map(r=&gt;Math.round(r*840000*12*0.4)),backgroundColor:'#BA7517',stack:'s'}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>]},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=&gt;fmt(c.raw)}}},scales:{x:{stacked:true},y:{stacked:true,ticks:{callback:v=&gt;'₡'+Math.round(v/1000000)+'M'}}}}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function calcSim(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const reses=+document.getElementById('sl-reses').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const precio=+document.getElementById('sl-precio').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const pR=+document.getElementById('sl-reinv').value/100;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const costos=+document.getElementById('sl-costos').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('out-reses').textContent=reses+' reses';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('out-precio').textContent=fmt(precio);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('out-reinv').textContent=Math.round(pR*100)+'%';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('out-costos').textContent=fmt(costos);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const bruto=reses*precio;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const reinvF=bruto*pR;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const famT=bruto*(1-pR);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const libre=reinvF-costos;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('s-bruto').textContent=fmt(bruto);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('s-bruto-usd').textContent=fmtU(bruto);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('s-fam').textContent=fmt(famT);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('s-fam-usd').textContent=fmtU(famT);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('s-reinv').textContent=fmt(reinvF);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('s-reinv-usd').textContent=fmtU(reinvF);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('s-libre').textContent=fmt(Math.max(0,libre));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('s-libre-usd').textContent=fmtU(Math.max(0,libre));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('r-bruto').textContent=fmt(bruto);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('r-bruto-usd').textContent=fmtU(bruto);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('r-fam').textContent=fmt(famT);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('r-fam-usd').textContent=fmtU(famT);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('r-reinv').textContent=fmt(reinvF);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('r-reinv-usd').textContent=fmtU(reinvF);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const minT=MINS.ma+MINS.yu+MINS.fq;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const sb=document.getElementById('sim-status');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(famT&gt;=minT){sb.className='status-bar ok';sb.textContent='Meta familiar alcanzada ✓ — todos los mínimos cubiertos';}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>else{sb.className='status-bar bad';sb.textContent='Falta '+fmt(minT-famT)+' para cubrir los mínimos familiares';}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const pMA=0.6;const pR2=(1-pMA)/2;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const amts={ma:famT*pMA,yu:famT*pR2,fq:famT*pR2};</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('benef-sim').innerHTML=`</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="benef-row"&gt;&lt;div class="avatar"&gt;MA&lt;/div&gt;&lt;div class="b-name"&gt;Maynor y Ana&lt;br&gt;&lt;span class="b-min"&gt;Mínimo ₡3,000,000&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div class="b-monto"&gt;${fmt(amts.ma)}&lt;/div&gt;&lt;div class="b-usd"&gt;${fmtU(amts.ma)}&lt;span class="b-status ${amts.ma&gt;=MINS.ma?'ok':'bad'}"&gt;${amts.ma&gt;=MINS.ma?' ✓':' ✗'}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="benef-row"&gt;&lt;div class="avatar" style="background:#1D9E75"&gt;YU&lt;/div&gt;&lt;div class="b-name"&gt;Yuliana&lt;br&gt;&lt;span class="b-min"&gt;Mínimo ₡1,000,000&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div class="b-monto"&gt;${fmt(amts.yu)}&lt;/div&gt;&lt;div class="b-usd"&gt;${fmtU(amts.yu)}&lt;span class="b-status ${amts.yu&gt;=MINS.yu?'ok':'bad'}"&gt;${amts.yu&gt;=MINS.yu?' ✓':' ✗'}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="benef-row"&gt;&lt;div class="avatar" style="background:#5DCAA5;color:#04342C"&gt;FQ&lt;/div&gt;&lt;div class="b-name"&gt;Francisco Quiroz&lt;br&gt;&lt;span class="b-min"&gt;Mínimo ₡1,000,000&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div class="b-monto"&gt;${fmt(amts.fq)}&lt;/div&gt;&lt;div class="b-usd"&gt;${fmtU(amts.fq)}&lt;span class="b-status ${amts.fq&gt;=MINS.fq?'ok':'bad'}"&gt;${amts.fq&gt;=MINS.fq?' ✓':' ✗'}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(charts.sim) charts.sim.destroy();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const labels=Array.from({length:20},(_,i)=&gt;i+1);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>charts.sim=new Chart(document.getElementById('chart-sim'),{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>type:'bar',</p>
+<p class="p1"><span class="Apple-converted-space">    </span>data:{labels:labels.map(x=&gt;x+' res'),datasets:[</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{label:'Familia',data:labels.map(x=&gt;Math.round(x*precio*(1-pR))),backgroundColor:'#3B6D11',stack:'s'},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{label:'Reinversión',data:labels.map(x=&gt;Math.round(x*precio*pR)),backgroundColor:'#BA7517',stack:'s'},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{label:'Meta',data:labels.map(()=&gt;minT),type:'line',borderColor:'#E24B4A',backgroundColor:'transparent',borderWidth:1.5,pointRadius:0,borderDash:[4,4]}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>]},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=&gt;fmt(c.raw)}}},scales:{x:{stacked:true,ticks:{autoSkip:true,maxTicksLimit:10}},y:{stacked:true,ticks:{callback:v=&gt;'₡'+Math.round(v/1000000)+'M'}}}}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1">}</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
