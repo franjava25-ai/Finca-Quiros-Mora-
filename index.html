@@ -34,6 +34,7 @@ nav .nav-links button.active,nav .nav-links button:hover{background:rgba(255,255
 .metric-sub{font-size:11px;color:#6b7280;margin-top:2px}
 .insight{background:#EAF3DE;border-left:3px solid #3B6D11;border-radius:0 8px 8px 0;padding:10px 14px;font-size:12px;color:#27500A;margin:12px 0}
 .warning{background:#FAEEDA;border-left:3px solid #BA7517;border-radius:0 8px 8px 0;padding:10px 14px;font-size:12px;color:#633806;margin:12px 0}
+.info{background:#E6F1FB;border-left:3px solid #185FA5;border-radius:0 8px 8px 0;padding:10px 14px;font-size:12px;color:#0C447C;margin:12px 0}
 .card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px;margin-bottom:12px}
 .card-title{font-size:13px;font-weight:500;margin-bottom:12px}
 table{width:100%;border-collapse:collapse;margin:12px 0;font-size:12px}
@@ -41,6 +42,7 @@ th{background:#2d6a4f;color:white;padding:8px 12px;text-align:left;font-weight:5
 td{padding:7px 12px;border-bottom:1px solid #e5e7eb}
 tr:nth-child(even) td{background:#f9fafb}
 .hl td{background:#EAF3DE !important;font-weight:500;color:#27500A}
+.hl2 td{background:#E6F1FB !important;font-weight:500;color:#0C447C}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .finca-card{display:flex;gap:12px;padding:14px;border-radius:12px;background:#f9fafb;border:1px solid #e5e7eb;margin-bottom:10px}
 .finca-icon{font-size:24px;flex-shrink:0;margin-top:2px}
@@ -129,6 +131,21 @@ tr:nth-child(even) td{background:#f9fafb}
 h3{font-size:13px;font-weight:500;margin:14px 0 8px}
 p{font-size:12px;margin-bottom:10px}
 .footer{background:#1b4332;color:rgba(255,255,255,.6);text-align:center;padding:20px 32px;font-size:11px;margin-top:40px}
+.costo-input{width:100%;padding:5px 8px;border:1px solid #e5e7eb;border-radius:6px;font-size:12px;text-align:right;background:#fff;color:#1f2937}
+.costo-input:focus{outline:none;border-color:#2d6a4f}
+.costo-total-row td{background:#EAF3DE !important;font-weight:500;color:#27500A}
+.range-compare{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.range-card{border-radius:12px;padding:14px;border:1px solid}
+.range-inv{background:#E6F1FB;border-color:#185FA5}
+.range-cebu{background:#EAF3DE;border-color:#3B6D11}
+.range-title{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.range-inv .range-title{color:#0C447C}
+.range-cebu .range-title{color:#27500A}
+.range-row{display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px}
+.range-row span:first-child{color:#6b7280}
+.range-row span:last-child{font-weight:500}
+.range-inv .range-row span:last-child{color:#0C447C}
+.range-cebu .range-row span:last-child{color:#27500A}
 </style>
 </head>
 <body>
@@ -155,7 +172,7 @@ p{font-size:12px;margin-bottom:10px}
   <div class="badges">
     <span class="badge">3 Fincas · 65 Hectáreas</span>
     <span class="badge">Meta: 10 Reses / Mes</span>
-    <span class="badge">₡8.4M Ingreso Bruto</span>
+    <span class="badge">Cebú Europeo 525–550 kg</span>
     <span class="badge">3 Beneficiarios</span>
   </div>
   <div class="hero-meta">Francisco Quiroz · Marzo 2026</div>
@@ -165,24 +182,38 @@ p{font-size:12px;margin-bottom:10px}
 <div id="page-resumen" class="page active">
   <div class="sec">
     <div class="sec-header"><div class="sec-num">1</div><div class="sec-title">Resumen ejecutivo</div></div>
-    <p>Plan estratégico integral para la <strong>Finca Quiros Mora</strong>, unificando el Proyecto de Inversión Ganadera (pie de cría y camadas trimestrales) con el negocio de ingresos familiares (venta mensual al carnicero). Ambos negocios operan en sinergia sobre tres fincas con 65 hectáreas.</p>
+    <p>Plan estratégico integral para la <strong>Finca Quiros Mora</strong>, unificando el Proyecto de Inversión Ganadera (pie de cría y camadas trimestrales) con el negocio de ingresos familiares (venta mensual al carnicero). Ganado cebú europeo con peso de venta estimado entre <strong>525–550 kg</strong>.</p>
+    <div class="range-compare">
+      <div class="range-card range-inv">
+        <div class="range-title">Rango mínimo — Inversionistas</div>
+        <div class="range-row"><span>Conservador</span><span>₡798,000/res</span></div>
+        <div class="range-row"><span>Normal</span><span>₡840,000/res</span></div>
+        <div class="range-row"><span>Optimista</span><span>₡889,000/res</span></div>
+      </div>
+      <div class="range-card range-cebu">
+        <div class="range-title">Rango real — Cebú europeo 537 kg</div>
+        <div class="range-row"><span>Conservador</span><span>₡832,000/res</span></div>
+        <div class="range-row"><span>Normal</span><span>₡886,000/res</span></div>
+        <div class="range-row"><span>Optimista</span><span>₡940,000/res</span></div>
+      </div>
+    </div>
     <div class="cards-grid">
       <div class="metric"><div class="metric-label">Fincas activas</div><div class="metric-value">3</div><div class="metric-sub">65 hectáreas totales</div></div>
       <div class="metric"><div class="metric-label">Reses actuales</div><div class="metric-value">35</div><div class="metric-sub">15 pie de cría · 20 engorde</div></div>
       <div class="metric"><div class="metric-label">Meta mensual</div><div class="metric-value">10 / mes</div><div class="metric-sub">Reses a vender</div></div>
-      <div class="metric"><div class="metric-label">Ingreso bruto meta</div><div class="metric-value">₡8.4M</div><div class="metric-sub">~$16,970 USD</div></div>
-      <div class="metric"><div class="metric-label">Para la familia</div><div class="metric-value">₡5.04M</div><div class="metric-sub">60% del ingreso</div></div>
-      <div class="metric"><div class="metric-label">Reinversión</div><div class="metric-value">₡3.36M</div><div class="metric-sub">40% del ingreso</div></div>
+      <div class="metric"><div class="metric-label">Ingreso bruto meta</div><div class="metric-value">₡8.86M</div><div class="metric-sub">~$17,900 USD · precio normal cebú</div></div>
+      <div class="metric"><div class="metric-label">Para la familia</div><div class="metric-value">₡5.32M</div><div class="metric-sub">60% del ingreso</div></div>
+      <div class="metric"><div class="metric-label">Reinversión</div><div class="metric-value">₡3.54M</div><div class="metric-sub">40% del ingreso</div></div>
     </div>
-    <div class="insight"><strong>Insight clave:</strong> Con 8 reses/mes solo se generan ₡4.03M para la familia — insuficiente. La meta real es 10 reses/mes, con lo cual se alcanzan todos los mínimos familiares.</div>
+    <div class="insight"><strong>Mejora vs. plan original:</strong> Con el cebú europeo a peso real (537 kg promedio), el ingreso familiar sube de ₡5.04M a ₡5.32M/mes — ₡280,000 más por mes que el plan base con inversionistas.</div>
     <div class="dist-grid">
-      <div class="dist-card dist-reinv"><div class="dist-pct">40%</div><div class="dist-label">Reinversión</div><div class="dist-monto">₡3,360,000 / mes · ~$6,788</div></div>
-      <div class="dist-card dist-fam"><div class="dist-pct">60%</div><div class="dist-label">Familia</div><div class="dist-monto">₡5,040,000 / mes · ~$10,182</div></div>
+      <div class="dist-card dist-reinv"><div class="dist-pct">40%</div><div class="dist-label">Reinversión</div><div class="dist-monto">₡3,544,000 / mes · ~$7,160</div></div>
+      <div class="dist-card dist-fam"><div class="dist-pct">60%</div><div class="dist-label">Familia</div><div class="dist-monto">₡5,316,000 / mes · ~$10,740</div></div>
     </div>
-    <h3>Distribución familiar — 10 reses · precio normal</h3>
-    <div class="benef-row"><div class="avatar">MA</div><div class="b-name">Maynor y Ana<br><span class="b-min">Mínimo: ₡3,000,000</span></div><div><div class="b-monto">₡3,024,000</div><div class="b-usd">~$6,109 USD ✓</div></div></div>
-    <div class="benef-row"><div class="avatar" style="background:#1D9E75">YU</div><div class="b-name">Yuliana<br><span class="b-min">Mínimo: ₡1,000,000</span></div><div><div class="b-monto">₡1,008,000</div><div class="b-usd">~$2,036 USD ✓</div></div></div>
-    <div class="benef-row"><div class="avatar" style="background:#5DCAA5;color:#04342C">FQ</div><div class="b-name">Francisco Quiroz<br><span class="b-min">Mínimo: ₡1,000,000</span></div><div><div class="b-monto">₡1,008,000</div><div class="b-usd">~$2,036 USD ✓</div></div></div>
+    <h3>Distribución familiar — 10 reses · precio normal cebú</h3>
+    <div class="benef-row"><div class="avatar">MA</div><div class="b-name">Maynor y Ana<br><span class="b-min">Mínimo: ₡3,000,000</span></div><div><div class="b-monto">₡3,189,600</div><div class="b-usd">~$6,444 USD ✓</div></div></div>
+    <div class="benef-row"><div class="avatar" style="background:#1D9E75">YU</div><div class="b-name">Yuliana<br><span class="b-min">Mínimo: ₡1,000,000</span></div><div><div class="b-monto">₡1,063,200</div><div class="b-usd">~$2,148 USD ✓</div></div></div>
+    <div class="benef-row"><div class="avatar" style="background:#5DCAA5;color:#04342C">FQ</div><div class="b-name">Francisco Quiroz<br><span class="b-min">Mínimo: ₡1,000,000</span></div><div><div class="b-monto">₡1,063,200</div><div class="b-usd">~$2,148 USD ✓</div></div></div>
   </div>
 </div>
 
@@ -200,73 +231,79 @@ p{font-size:12px;margin-bottom:10px}
       <tr><td>La Gloria</td><td>30 ha</td><td>30 reses</td><td>60 reses</td><td>Pastoreo / pie de cría</td></tr>
       <tr class="hl"><td><strong>Total</strong></td><td><strong>65 ha</strong></td><td><strong>63 reses</strong></td><td><strong>126 reses</strong></td><td>✅ Capacidad suficiente</td></tr>
     </table>
-    <div class="two-col" style="margin-top:14px">
-      <div class="card"><div class="card-title">Capacidad por finca</div>
-        <div class="prog-row-d"><span class="prog-lbl-d">Sardinal</span><div class="prog-bar-d"><div class="prog-fill-d" style="width:51%"></div></div><span class="prog-val-d">33 ha</span></div>
-        <div class="prog-row-d"><span class="prog-lbl-d">La Gloria</span><div class="prog-bar-d"><div class="prog-fill-d" style="width:46%;background:#1D9E75"></div></div><span class="prog-val-d">30 ha</span></div>
-        <div class="prog-row-d"><span class="prog-lbl-d">Puriscal</span><div class="prog-bar-d"><div class="prog-fill-d" style="width:3%;background:#5DCAA5"></div></div><span class="prog-val-d">2 ha</span></div>
-      </div>
-      <div class="card"><div class="card-title">Reses actuales</div>
-        <div class="prog-row-d"><span class="prog-lbl-d">Pie de cría</span><div class="prog-bar-d"><div class="prog-fill-d" style="width:43%"></div></div><span class="prog-val-d">15 reses</span></div>
-        <div class="prog-row-d"><span class="prog-lbl-d">Engorde</span><div class="prog-bar-d"><div class="prog-fill-d" style="width:57%;background:#BA7517"></div></div><span class="prog-val-d">20 reses</span></div>
-        <div class="prog-row-d"><span class="prog-lbl-d">Inversión</span><div class="prog-bar-d"><div class="prog-fill-d" style="width:29%;background:#5DCAA5"></div></div><span class="prog-val-d">10 reses</span></div>
-      </div>
-    </div>
   </div>
 </div>
 
 <!-- PRECIOS -->
 <div id="page-precios" class="page">
   <div class="sec">
-    <div class="sec-header"><div class="sec-num">3</div><div class="sec-title">Estructura de precios y proyección de ingresos</div></div>
-    <p style="font-size:11px;color:#6b7280">Tipo de cambio: ₡495 por $1 USD (promedio últimos 3 meses, Costa Rica)</p>
+    <div class="sec-header"><div class="sec-num">3</div><div class="sec-title">Estructura de precios</div></div>
+    <p style="font-size:11px;color:#6b7280">Tipo de cambio: ₡495 por $1 USD · Fuente precios: CORFOGA + mercado directo carnicero · Peso cebú: 525–550 kg (promedio 537 kg)</p>
+
+    <h3>Rango mínimo — Parámetro inversionistas</h3>
+    <div class="info">Estos son los precios base comprometidos con inversionistas. Son el <strong>piso mínimo</strong> de referencia.</div>
     <table>
-      <tr><th>Escenario</th><th>Precio por res (₡)</th><th>Precio por res (USD)</th></tr>
-      <tr><td>Conservador</td><td>₡798,000</td><td>~$1,612</td></tr>
-      <tr class="hl"><td>Normal (base)</td><td>₡840,000</td><td>~$1,697</td></tr>
-      <tr><td>Optimista</td><td>₡889,000</td><td>~$1,796</td></tr>
+      <tr><th>Escenario</th><th>Precio por res (₡)</th><th>USD</th><th>10 reses/mes</th></tr>
+      <tr><td>Conservador</td><td>₡798,000</td><td>~$1,612</td><td>₡7,980,000</td></tr>
+      <tr class="hl2"><td>Normal</td><td>₡840,000</td><td>~$1,697</td><td>₡8,400,000</td></tr>
+      <tr><td>Optimista</td><td>₡889,000</td><td>~$1,796</td><td>₡8,890,000</td></tr>
     </table>
+
+    <h3>Rango real — Cebú europeo 537 kg (CORFOGA + carnicero directo)</h3>
+    <div class="insight">Estos son los precios esperados con el ganado cebú europeo a peso real. Son la <strong>proyección real de ingresos</strong> de la finca.</div>
     <table>
-      <tr><th>Reses/mes</th><th>Conservador</th><th>Normal</th><th>Optimista</th><th>60% familia</th><th>¿Alcanza?</th></tr>
-      <tr><td>8 reses</td><td>₡6,384,000</td><td>₡6,720,000</td><td>₡7,112,000</td><td>₡4,032,000</td><td>❌ No</td></tr>
-      <tr><td>9 reses</td><td>₡7,182,000</td><td>₡7,560,000</td><td>₡8,001,000</td><td>₡4,536,000</td><td>❌ Falta ₡464K</td></tr>
-      <tr class="hl"><td><strong>10 reses ✅</strong></td><td>₡7,980,000</td><td>₡8,400,000</td><td>₡8,890,000</td><td>₡5,040,000</td><td><strong>✅ Sí</strong></td></tr>
-      <tr><td>11 reses</td><td>₡8,778,000</td><td>₡9,240,000</td><td>₡9,779,000</td><td>₡5,544,000</td><td>✅ Holgura</td></tr>
+      <tr><th>Escenario</th><th>₡/kg en pie</th><th>Precio por res (537 kg)</th><th>USD</th><th>10 reses/mes</th></tr>
+      <tr><td>Conservador</td><td>₡1,550/kg</td><td>₡832,350 → ₡832,000</td><td>~$1,681</td><td>₡8,320,000</td></tr>
+      <tr class="hl"><td>Normal</td><td>₡1,650/kg</td><td>₡886,050 → ₡886,000</td><td>~$1,790</td><td>₡8,860,000</td></tr>
+      <tr><td>Optimista</td><td>₡1,750/kg</td><td>₡939,750 → ₡940,000</td><td>~$1,899</td><td>₡9,400,000</td></tr>
     </table>
-    <div class="legend"><span><span class="leg-dot" style="background:#97C459"></span>Conservador</span><span><span class="leg-dot" style="background:#2d6a4f"></span>Normal</span><span><span class="leg-dot" style="background:#1D9E75"></span>Optimista</span><span><span class="leg-dot" style="background:#E24B4A"></span>Meta ₡5M</span></div>
-    <div class="chart-wrap" style="height:240px"><canvas id="chart-precios"></canvas></div>
+
+    <h3>¿Cuántas reses se necesitan para cubrir los mínimos familiares? (precio normal cebú)</h3>
+    <table>
+      <tr><th>Reses/mes</th><th>Ingreso bruto</th><th>60% familia</th><th>¿Alcanza?</th></tr>
+      <tr><td>8 reses</td><td>₡7,088,000</td><td>₡4,252,800</td><td>❌ No</td></tr>
+      <tr><td>9 reses</td><td>₡7,974,000</td><td>₡4,784,400</td><td>❌ Falta ₡215K</td></tr>
+      <tr class="hl"><td><strong>10 reses ✅</strong></td><td>₡8,860,000</td><td>₡5,316,000</td><td><strong>✅ Sí — holgura ₡316K</strong></td></tr>
+      <tr><td>11 reses</td><td>₡9,746,000</td><td>₡5,847,600</td><td>✅ Muy holgado</td></tr>
+    </table>
+
+    <div class="legend"><span><span class="leg-dot" style="background:#185FA5"></span>Mínimo inversionistas</span><span><span class="leg-dot" style="background:#2d6a4f"></span>Real cebú normal</span><span><span class="leg-dot" style="background:#1D9E75"></span>Real cebú optimista</span><span><span class="leg-dot" style="background:#E24B4A"></span>Meta familia ₡5M</span></div>
+    <div class="chart-wrap" style="height:260px"><canvas id="chart-precios"></canvas></div>
   </div>
 </div>
 
 <!-- COSTOS -->
 <div id="page-costos" class="page">
   <div class="sec">
-    <div class="sec-header"><div class="sec-num">4</div><div class="sec-title">Costos operativos estimados</div></div>
-    <table>
-      <tr><th>Categoría</th><th>Concepto</th><th>Mensual (₡)</th><th>Mensual (USD)</th></tr>
-      <tr><td style="color:#2d6a4f;font-weight:500" rowspan="3">Alimentación</td><td>Suplemento mineral (45 reses)</td><td>₡180,000</td><td>~$364</td></tr>
-      <tr><td>Concentrado engorde — Puriscal</td><td>₡420,000</td><td>~$848</td></tr>
-      <tr><td>Mantenimiento y mejora de pastos</td><td>₡150,000</td><td>~$303</td></tr>
-      <tr><td style="color:#2d6a4f;font-weight:500" rowspan="3">Sanidad</td><td>Vacunas, desparasitación, vitaminas</td><td>₡120,000</td><td>~$242</td></tr>
-      <tr><td>Visita veterinaria mensual</td><td>₡80,000</td><td>~$162</td></tr>
-      <tr><td>Medicamentos e imprevistos</td><td>₡60,000</td><td>~$121</td></tr>
-      <tr><td style="color:#2d6a4f;font-weight:500" rowspan="2">Mano de obra</td><td>Peón finca (tiempo completo)</td><td>₡380,000</td><td>~$768</td></tr>
-      <tr><td>Apoyo ocasional</td><td>₡80,000</td><td>~$162</td></tr>
-      <tr><td style="color:#2d6a4f;font-weight:500" rowspan="2">Logística</td><td>Transporte reses al carnicero</td><td>₡150,000</td><td>~$303</td></tr>
-      <tr><td>Combustible y movilización</td><td>₡80,000</td><td>~$162</td></tr>
-      <tr><td style="color:#2d6a4f;font-weight:500" rowspan="2">Infraestructura</td><td>Mantenimiento cercas y equipos</td><td>₡60,000</td><td>~$121</td></tr>
-      <tr><td>Servicios (agua, electricidad)</td><td>₡40,000</td><td>~$81</td></tr>
-      <tr class="hl"><td colspan="2"><strong>Total costos operativos</strong></td><td><strong>₡1,800,000</strong></td><td><strong>~$3,636</strong></td></tr>
+    <div class="sec-header"><div class="sec-num">4</div><div class="sec-title">Costos operativos — tabla editable</div></div>
+    <p>Editá cada costo directamente en la tabla. Los totales se actualizan automáticamente.</p>
+    <table id="tabla-costos">
+      <tr><th>Categoría</th><th>Concepto</th><th>Mensual (₡) — editable</th><th>Mensual (USD)</th></tr>
+      <tr><td style="color:#2d6a4f;font-weight:500" rowspan="3">Alimentación</td><td>Suplemento mineral (45 reses)</td><td><input class="costo-input" data-costo type="number" value="180000" oninput="calcCostos()"></td><td class="usd-cell"></td></tr>
+      <tr><td>Concentrado engorde — Puriscal</td><td><input class="costo-input" data-costo type="number" value="420000" oninput="calcCostos()"></td><td class="usd-cell"></td></tr>
+      <tr><td>Mantenimiento y mejora de pastos</td><td><input class="costo-input" data-costo type="number" value="150000" oninput="calcCostos()"></td><td class="usd-cell"></td></tr>
+      <tr><td style="color:#2d6a4f;font-weight:500" rowspan="3">Sanidad</td><td>Vacunas, desparasitación, vitaminas</td><td><input class="costo-input" data-costo type="number" value="120000" oninput="calcCostos()"></td><td class="usd-cell"></td></tr>
+      <tr><td>Visita veterinaria mensual</td><td><input class="costo-input" data-costo type="number" value="80000" oninput="calcCostos()"></td><td class="usd-cell"></td></tr>
+      <tr><td>Medicamentos e imprevistos</td><td><input class="costo-input" data-costo type="number" value="60000" oninput="calcCostos()"></td><td class="usd-cell"></td></tr>
+      <tr><td style="color:#2d6a4f;font-weight:500" rowspan="2">Mano de obra</td><td>Peón finca (tiempo completo)</td><td><input class="costo-input" data-costo type="number" value="380000" oninput="calcCostos()"></td><td class="usd-cell"></td></tr>
+      <tr><td>Apoyo ocasional</td><td><input class="costo-input" data-costo type="number" value="80000" oninput="calcCostos()"></td><td class="usd-cell"></td></tr>
+      <tr><td style="color:#2d6a4f;font-weight:500" rowspan="2">Logística</td><td>Transporte reses al carnicero</td><td><input class="costo-input" data-costo type="number" value="150000" oninput="calcCostos()"></td><td class="usd-cell"></td></tr>
+      <tr><td>Combustible y movilización</td><td><input class="costo-input" data-costo type="number" value="80000" oninput="calcCostos()"></td><td class="usd-cell"></td></tr>
+      <tr><td style="color:#2d6a4f;font-weight:500" rowspan="2">Infraestructura</td><td>Mantenimiento cercas y equipos</td><td><input class="costo-input" data-costo type="number" value="60000" oninput="calcCostos()"></td><td class="usd-cell"></td></tr>
+      <tr><td>Servicios (agua, electricidad)</td><td><input class="costo-input" data-costo type="number" value="40000" oninput="calcCostos()"></td><td class="usd-cell"></td></tr>
+      <tr class="costo-total-row"><td colspan="2"><strong>Total costos operativos</strong></td><td id="total-costos-col"><strong>₡1,800,000</strong></td><td id="total-costos-usd"><strong>~$3,636</strong></td></tr>
     </table>
+
+    <h3>Utilidad neta real — 10 reses · precio normal cebú</h3>
     <table>
       <tr><th>Concepto</th><th>En Colones (₡)</th><th>En USD</th></tr>
-      <tr><td>Ingreso bruto</td><td>₡8,400,000</td><td>~$16,970</td></tr>
-      <tr><td>40% reinversión</td><td>₡3,360,000</td><td>~$6,788</td></tr>
-      <tr><td>Costos operativos (desde reinversión)</td><td>-₡1,800,000</td><td>~-$3,636</td></tr>
-      <tr><td>Reinversión libre para novillos</td><td>₡1,560,000</td><td>~$3,152</td></tr>
-      <tr class="hl"><td><strong>60% familia (bruto)</strong></td><td><strong>₡5,040,000</strong></td><td><strong>~$10,182</strong></td></tr>
+      <tr><td>Ingreso bruto</td><td>₡8,860,000</td><td>~$17,899</td></tr>
+      <tr><td>40% reinversión</td><td id="reinv-calc">₡3,544,000</td><td id="reinv-calc-usd">~$7,160</td></tr>
+      <tr><td>Costos operativos (desde reinversión)</td><td id="costos-calc">-₡1,800,000</td><td id="costos-calc-usd">~-$3,636</td></tr>
+      <tr><td>Reinversión libre para novillos</td><td id="libre-calc">₡1,744,000</td><td id="libre-calc-usd">~$3,524</td></tr>
+      <tr class="hl"><td><strong>60% familia</strong></td><td><strong>₡5,316,000</strong></td><td><strong>~$10,740</strong></td></tr>
     </table>
-    <div class="warning"><strong>Nota:</strong> Los costos operativos se cubren desde el fondo de reinversión, dejando ₡1,560,000 libres para compra de novillos.</div>
+    <div class="warning"><strong>Nota:</strong> Los costos se cubren desde el fondo de reinversión (40%). El 60% familiar se paga sobre el ingreso bruto garantizando los mínimos acordados.</div>
   </div>
 </div>
 
@@ -274,7 +311,7 @@ p{font-size:12px;margin-bottom:10px}
 <div id="page-inversion" class="page">
   <div class="sec">
     <div class="sec-header"><div class="sec-num">5</div><div class="sec-title">Proyecto de inversión — camadas trimestrales</div></div>
-    <p>4 camadas al año (marzo, junio, septiembre, diciembre), creciendo hasta 30 cabezas por camada.</p>
+    <p>4 camadas al año (marzo, junio, septiembre, diciembre), creciendo hasta 30 cabezas por camada. Ganado cebú europeo con un año de crecimiento antes de entrar al ciclo de engorde.</p>
     <div class="camada-grid">
       <div class="camada-card"><div class="camada-mes">MAR</div><div class="camada-lbl">Camada 1</div><div class="prog-row"><span class="prog-lbl">Año 1</span><div class="prog-bar"><div class="prog-fill" style="width:23%"></div></div><span class="prog-val">7</span></div><div class="prog-row"><span class="prog-lbl">Año 2</span><div class="prog-bar"><div class="prog-fill" style="width:50%"></div></div><span class="prog-val">15</span></div><div class="prog-row"><span class="prog-lbl">Año 3</span><div class="prog-bar"><div class="prog-fill" style="width:83%"></div></div><span class="prog-val">25</span></div><div class="prog-row"><span class="prog-lbl">Año 4+</span><div class="prog-bar"><div class="prog-fill" style="width:100%"></div></div><span class="prog-val">30</span></div></div>
       <div class="camada-card"><div class="camada-mes">JUN</div><div class="camada-lbl">Camada 2</div><div class="prog-row"><span class="prog-lbl">Año 1</span><div class="prog-bar"><div class="prog-fill" style="width:23%"></div></div><span class="prog-val">7</span></div><div class="prog-row"><span class="prog-lbl">Año 2</span><div class="prog-bar"><div class="prog-fill" style="width:50%"></div></div><span class="prog-val">15</span></div><div class="prog-row"><span class="prog-lbl">Año 3</span><div class="prog-bar"><div class="prog-fill" style="width:83%"></div></div><span class="prog-val">25</span></div><div class="prog-row"><span class="prog-lbl">Año 4+</span><div class="prog-bar"><div class="prog-fill" style="width:100%"></div></div><span class="prog-val">30</span></div></div>
@@ -288,7 +325,7 @@ p{font-size:12px;margin-bottom:10px}
       <tr><td>Año 3</td><td>25</td><td>100</td><td>~40–50 novillos</td></tr>
       <tr class="hl"><td>Año 4+</td><td>30</td><td>120</td><td>✅ Autoabastecimiento total</td></tr>
     </table>
-    <div class="insight"><strong>Sinergia clave:</strong> A partir del Año 2 el proyecto provee suficientes novillos para que la Finca QM no necesite comprar en el mercado externo.</div>
+    <div class="insight"><strong>Ventaja cebú europeo:</strong> Con un año de crecimiento previo al engorde, los animales entran al ciclo con mayor masa muscular, alcanzando los 525–550 kg de venta más rápido y con menor costo de conversión.</div>
     <div class="legend" style="margin-top:14px"><span><span class="leg-dot" style="background:#3B6D11"></span>Familia anual</span><span><span class="leg-dot" style="background:#BA7517"></span>Reinversión anual</span></div>
     <div class="chart-wrap" style="height:240px"><canvas id="chart-inversion"></canvas></div>
   </div>
@@ -300,19 +337,20 @@ p{font-size:12px;margin-bottom:10px}
     <div class="sec-header"><div class="sec-num">6</div><div class="sec-title">Sinergia entre ambos negocios</div></div>
     <div class="sin-item"><div class="sin-icon">🐣</div><div><div class="sin-tit">Pie de cría → suministro sin costo externo</div><div class="sin-desc">Las 15 reses de pie de cría generan crías que pasan directamente al ciclo de engorde. A partir del Año 2 se elimina la compra externa.</div></div></div>
     <div class="sin-item"><div class="sin-icon">🌾</div><div><div class="sin-tit">Infraestructura compartida — 3 fincas, 65 hectáreas</div><div class="sin-desc">La Gloria aloja pie de cría; Sardinal concentra el engorde extensivo; Puriscal da el toque final estabulado antes de venta.</div></div></div>
-    <div class="sin-item"><div class="sin-icon">💰</div><div><div class="sin-tit">Reinversión del 40% alimenta ambos negocios</div><div class="sin-desc">Los ₡3,360,000 mensuales se destinan a compra de novillos, mejora de pastos y expansión del pie de cría simultáneamente.</div></div></div>
-    <div class="sin-item"><div class="sin-icon">🤝</div><div><div class="sin-tit">Poder de negociación con el carnicero</div><div class="sin-desc">10 reses/mes garantizadas permiten negociar contrato estable y eliminar la volatilidad del mercado spot.</div></div></div>
+    <div class="sin-item"><div class="sin-icon">💰</div><div><div class="sin-tit">Reinversión del 40% alimenta ambos negocios</div><div class="sin-desc">Los ₡3,544,000 mensuales se destinan a compra de novillos, mejora de pastos y expansión del pie de cría simultáneamente.</div></div></div>
+    <div class="sin-item"><div class="sin-icon">🐄</div><div><div class="sin-tit">Ventaja genética — Cebú europeo</div><div class="sin-desc">El ganado cebú europeo con un año de desarrollo previo al engorde llega a 525–550 kg, generando ₡50,000–₡100,000 más por res vs. el parámetro de inversionistas.</div></div></div>
+    <div class="sin-item"><div class="sin-icon">🤝</div><div><div class="sin-tit">Poder de negociación con el carnicero</div><div class="sin-desc">10 reses/mes garantizadas de calidad cebú europeo permiten negociar precio premium sobre el mercado.</div></div></div>
     <h3>Ciclo integral unificado</h3>
     <div class="ciclo">
       <div class="ciclo-step"><div class="ciclo-icon">🐄</div><div class="ciclo-lbl">Pie de cría</div><div class="ciclo-sub">La Gloria</div></div>
       <div class="ciclo-arr">→</div>
-      <div class="ciclo-step"><div class="ciclo-icon">🐮</div><div class="ciclo-lbl">Cría/novillo</div><div class="ciclo-sub">Nace en finca</div></div>
+      <div class="ciclo-step"><div class="ciclo-icon">🐮</div><div class="ciclo-lbl">1 año crecimiento</div><div class="ciclo-sub">Cebú europeo</div></div>
       <div class="ciclo-arr">→</div>
       <div class="ciclo-step"><div class="ciclo-icon">🌾</div><div class="ciclo-lbl">Engorde pasto</div><div class="ciclo-sub">4–5 meses · Sardinal</div></div>
       <div class="ciclo-arr">→</div>
       <div class="ciclo-step"><div class="ciclo-icon">🏠</div><div class="ciclo-lbl">Engorde final</div><div class="ciclo-sub">60 días · Puriscal</div></div>
       <div class="ciclo-arr">→</div>
-      <div class="ciclo-step"><div class="ciclo-icon">🔪</div><div class="ciclo-lbl">Venta</div><div class="ciclo-sub">420–450 kg</div></div>
+      <div class="ciclo-step"><div class="ciclo-icon">🔪</div><div class="ciclo-lbl">Venta</div><div class="ciclo-sub">525–550 kg</div></div>
       <div class="ciclo-arr">→</div>
       <div class="ciclo-step"><div class="ciclo-icon">💵</div><div class="ciclo-lbl">Ingreso</div><div class="ciclo-sub">60% familia · 40% reinv.</div></div>
     </div>
@@ -329,7 +367,7 @@ p{font-size:12px;margin-bottom:10px}
         <div class="paso"><div class="paso-n">1</div><p>Separar las <strong>15 reses de pie de cría</strong> de las <strong>20 disponibles</strong> para engorde. Identificar con aretes.</p></div>
         <div class="paso"><div class="paso-n">2</div><p>Asignar roles: Sardinal = engorde extensivo · La Gloria = pie de cría + pastoreo · Puriscal = engorde final 60 días.</p></div>
         <div class="paso"><div class="paso-n">3</div><p>Pesar y clasificar las 20 reses: "listas ya" (≥400 kg) vs. "necesitan 2–4 meses más".</p></div>
-        <div class="paso"><div class="paso-n">4</div><p>Negociar con al menos 2 carniceros. Objetivo: <strong>contrato fijo de 10 reses/mes a ₡840,000</strong>.</p></div>
+        <div class="paso"><div class="paso-n">4</div><p>Negociar con al menos 2 carniceros. Objetivo: <strong>contrato fijo de 10 reses/mes — precio cebú europeo ₡886,000</strong>.</p></div>
         <div class="paso"><div class="paso-n">5</div><p>Crear registro por animal: arete, peso inicial, finca, fecha ingreso, fase actual.</p></div>
       </div>
     </div>
@@ -337,10 +375,10 @@ p{font-size:12px;margin-bottom:10px}
       <div class="fase-hdr"><div class="fase-num">2</div><div class="fase-tit">Fase 2 — Primeras ventas y construcción del hato</div><div class="fase-per">May – Ago 2026</div></div>
       <div class="fase-body">
         <div class="paso"><div class="paso-n">6</div><p>Vender las primeras reses listas (3–5). <strong>Primer ingreso real a Maynor y Ana, Yuliana y Francisco.</strong></p></div>
-        <div class="paso"><div class="paso-n">7</div><p>Con el 40% de reinversión, comprar <strong>20–25 novillos flacos</strong> (180–250 kg) para completar el ciclo.</p></div>
-        <div class="paso"><div class="paso-n">8</div><p>Iniciar mejora de pastos en Sardinal con <strong>semilla Brizantha o Brachiaria</strong> para duplicar capacidad.</p></div>
-        <div class="paso"><div class="paso-n">9</div><p>Establecer ciclo Sardinal (4–5 meses pasto) → Puriscal (60 días estabulado) → venta.</p></div>
-        <div class="paso"><div class="paso-n">10</div><p>Primera camada de marzo 2026 (7 cabezas) pasa al ciclo de engorde en el segundo semestre.</p></div>
+        <div class="paso"><div class="paso-n">7</div><p>Con el 40% de reinversión, comprar <strong>20–25 novillos flacos cebú</strong> (180–250 kg) para completar el ciclo.</p></div>
+        <div class="paso"><div class="paso-n">8</div><p>Iniciar mejora de pastos en Sardinal con <strong>semilla Brizantha o Brachiaria</strong> para soportar el peso mayor del cebú europeo.</p></div>
+        <div class="paso"><div class="paso-n">9</div><p>Establecer ciclo: 1 año crecimiento → Sardinal (4–5 meses pasto) → Puriscal (60 días estabulado) → venta 525–550 kg.</p></div>
+        <div class="paso"><div class="paso-n">10</div><p>Primera camada de marzo 2026 (7 cabezas) entra al año de crecimiento — lista para engorde en marzo 2027.</p></div>
       </div>
     </div>
     <div class="fase f3">
@@ -348,9 +386,9 @@ p{font-size:12px;margin-bottom:10px}
       <div class="fase-body">
         <div class="paso"><div class="paso-n">11</div><p>Mantener <strong>45 reses en ciclo rotativo</strong> divididas en las tres fases de engorde.</p></div>
         <div class="paso"><div class="paso-n">12</div><p><strong>10 salidas = 10 entradas por mes.</strong> Cada res vendida se reemplaza inmediatamente.</p></div>
-        <div class="paso"><div class="paso-n">13</div><p>Distribución mensual: <strong>Maynor y Ana ₡3,024,000 · Yuliana ₡1,008,000 · Francisco ₡1,008,000.</strong></p></div>
-        <div class="paso"><div class="paso-n">14</div><p>Revisión semestral de precios con el carnicero. Desde Año 2, camadas eliminan compra externa.</p></div>
-        <div class="paso"><div class="paso-n">15</div><p>Meta a Año 4: escalar a <strong>12–15 reses/mes</strong> con camadas en pleno funcionamiento.</p></div>
+        <div class="paso"><div class="paso-n">13</div><p>Distribución mensual: <strong>Maynor y Ana ₡3,189,600 · Yuliana ₡1,063,200 · Francisco ₡1,063,200.</strong></p></div>
+        <div class="paso"><div class="paso-n">14</div><p>Revisión semestral de precios con el carnicero negociando la calidad premium del cebú europeo.</p></div>
+        <div class="paso"><div class="paso-n">15</div><p>Meta a Año 4: escalar a <strong>12–15 reses/mes</strong> con camadas en pleno funcionamiento (30 × 4 = 120/año).</p></div>
       </div>
     </div>
   </div>
@@ -361,36 +399,38 @@ p{font-size:12px;margin-bottom:10px}
   <div class="sec">
     <div class="sec-header"><div class="sec-num">8</div><div class="sec-title">Simulador interactivo de ingresos</div></div>
     <div class="cards-grid" style="grid-template-columns:repeat(4,minmax(0,1fr))">
-      <div class="metric"><div class="metric-label">Ingreso bruto</div><div class="metric-value" id="s-bruto">₡8,400,000</div><div class="metric-sub" id="s-bruto-usd">~$16,970</div></div>
-      <div class="metric"><div class="metric-label">Para familia (60%)</div><div class="metric-value" id="s-fam">₡5,040,000</div><div class="metric-sub" id="s-fam-usd">~$10,182</div></div>
-      <div class="metric"><div class="metric-label">Reinversión (40%)</div><div class="metric-value" style="color:#633806" id="s-reinv">₡3,360,000</div><div class="metric-sub" id="s-reinv-usd">~$6,788</div></div>
-      <div class="metric"><div class="metric-label">Reinversión libre</div><div class="metric-value" id="s-libre">₡1,560,000</div><div class="metric-sub" id="s-libre-usd">~$3,152</div></div>
+      <div class="metric"><div class="metric-label">Ingreso bruto</div><div class="metric-value" id="s-bruto">₡8,860,000</div><div class="metric-sub" id="s-bruto-usd">~$17,899</div></div>
+      <div class="metric"><div class="metric-label">Para familia (60%)</div><div class="metric-value" id="s-fam">₡5,316,000</div><div class="metric-sub" id="s-fam-usd">~$10,740</div></div>
+      <div class="metric"><div class="metric-label">Reinversión (40%)</div><div class="metric-value" style="color:#633806" id="s-reinv">₡3,544,000</div><div class="metric-sub" id="s-reinv-usd">~$7,160</div></div>
+      <div class="metric"><div class="metric-label">Reinversión libre</div><div class="metric-value" id="s-libre">₡1,744,000</div><div class="metric-sub" id="s-libre-usd">~$3,524</div></div>
     </div>
     <div class="card">
       <div class="card-title">Controles</div>
       <div class="slider-row"><label>Reses por mes</label><input type="range" min="1" max="20" value="10" step="1" id="sl-reses" oninput="calcSim()"><span class="slider-val" id="out-reses">10 reses</span></div>
-      <div class="slider-row"><label>Precio por res (₡)</label><input type="range" min="700000" max="1000000" value="840000" step="1000" id="sl-precio" oninput="calcSim()"><span class="slider-val" id="out-precio">₡840,000</span></div>
+      <div class="slider-row"><label>Precio por res (₡)</label><input type="range" min="700000" max="1100000" value="886000" step="1000" id="sl-precio" oninput="calcSim()"><span class="slider-val" id="out-precio">₡886,000</span></div>
       <div class="slider-row"><label>% Reinversión</label><input type="range" min="10" max="60" value="40" step="5" id="sl-reinv" oninput="calcSim()"><span class="slider-val" id="out-reinv">40%</span></div>
       <div class="slider-row"><label>Costos operativos (₡)</label><input type="range" min="500000" max="4000000" value="1800000" step="50000" id="sl-costos" oninput="calcSim()"><span class="slider-val" id="out-costos">₡1,800,000</span></div>
     </div>
+    <div class="info" style="margin:8px 0;font-size:11px">Referencia: precio mínimo inversionistas ₡840,000 · precio real cebú ₡886,000</div>
     <div id="sim-status" class="status-bar ok">Meta familiar alcanzada ✓ — todos los mínimos cubiertos</div>
     <div class="result-grid">
-      <div class="result-card bruto"><div class="result-label">Ingreso bruto</div><div class="result-value" id="r-bruto">₡8,400,000</div><div style="font-size:11px;color:#6b7280" id="r-bruto-usd">~$16,970</div></div>
-      <div class="result-card fam"><div class="result-label">Para familia</div><div class="result-value" id="r-fam">₡5,040,000</div><div style="font-size:11px;color:#6b7280" id="r-fam-usd">~$10,182</div></div>
-      <div class="result-card reinv"><div class="result-label">Reinversión</div><div class="result-value" id="r-reinv">₡3,360,000</div><div style="font-size:11px;color:#6b7280" id="r-reinv-usd">~$6,788</div></div>
+      <div class="result-card bruto"><div class="result-label">Ingreso bruto</div><div class="result-value" id="r-bruto">₡8,860,000</div><div style="font-size:11px;color:#6b7280" id="r-bruto-usd">~$17,899</div></div>
+      <div class="result-card fam"><div class="result-label">Para familia</div><div class="result-value" id="r-fam">₡5,316,000</div><div style="font-size:11px;color:#6b7280" id="r-fam-usd">~$10,740</div></div>
+      <div class="result-card reinv"><div class="result-label">Reinversión</div><div class="result-value" id="r-reinv">₡3,544,000</div><div style="font-size:11px;color:#6b7280" id="r-reinv-usd">~$7,160</div></div>
     </div>
     <h3>Distribución familiar en tiempo real</h3>
     <div id="benef-sim"></div>
-    <div class="legend" style="margin-top:14px"><span><span class="leg-dot" style="background:#3B6D11"></span>Familia</span><span><span class="leg-dot" style="background:#BA7517"></span>Reinversión</span><span><span class="leg-dot" style="background:#E24B4A"></span>Meta ₡5M</span></div>
+    <div class="legend" style="margin-top:14px"><span><span class="leg-dot" style="background:#3B6D11"></span>Familia</span><span><span class="leg-dot" style="background:#BA7517"></span>Reinversión</span><span><span class="leg-dot" style="background:#E24B4A"></span>Meta ₡5M</span><span><span class="leg-dot" style="background:#185FA5"></span>Mínimo inversionistas</span></div>
     <div class="chart-wrap" style="height:240px"><canvas id="chart-sim"></canvas></div>
   </div>
 </div>
 
-<div class="footer">Finca Quiros Mora · Plan Estratégico Ganadero · Marzo 2026 · Francisco Quiroz</div>
+<div class="footer">Finca Quiros Mora · Plan Estratégico Ganadero · Marzo 2026 · Francisco Quiroz · Confidencial</div>
 
 <script>
 const TC=495;
 const MINS={ma:3000000,yu:1000000,fq:1000000};
+const PRECIO_INV=840000;
 function fmt(n){return '₡'+Math.round(n).toLocaleString('es-CR')}
 function fmtU(n){return '~$'+Math.round(n/TC).toLocaleString('es-CR')}
 let charts={};
@@ -403,6 +443,28 @@ function showPage(id,btn){
   if(id==='precios') initPrecios();
   if(id==='inversion') initInversion();
   if(id==='simulador') calcSim();
+  if(id==='costos') calcCostos();
+}
+
+function calcCostos(){
+  const inputs=document.querySelectorAll('[data-costo]');
+  let total=0;
+  inputs.forEach((inp,i)=>{
+    const val=+inp.value||0;
+    total+=val;
+    const row=inp.closest('tr');
+    const usdCell=row.querySelector('.usd-cell');
+    if(usdCell) usdCell.textContent='~$'+Math.round(val/TC).toLocaleString('es-CR');
+  });
+  document.getElementById('total-costos-col').innerHTML='<strong>'+fmt(total)+'</strong>';
+  document.getElementById('total-costos-usd').innerHTML='<strong>~$'+Math.round(total/TC).toLocaleString('es-CR')+'</strong>';
+  const bruto=8860000;
+  const reinv=bruto*0.4;
+  const libre=reinv-total;
+  document.getElementById('costos-calc').textContent='-'+fmt(total);
+  document.getElementById('costos-calc-usd').textContent='~-$'+Math.round(total/TC).toLocaleString('es-CR');
+  document.getElementById('libre-calc').textContent=fmt(Math.max(0,libre));
+  document.getElementById('libre-calc-usd').textContent='~$'+Math.round(Math.max(0,libre)/TC).toLocaleString('es-CR');
 }
 
 function initPrecios(){
@@ -411,10 +473,10 @@ function initPrecios(){
   charts.precios=new Chart(document.getElementById('chart-precios'),{
     type:'line',
     data:{labels:r.map(x=>x+' reses'),datasets:[
-      {label:'Conservador',data:r.map(x=>Math.round(x*798000*0.6)),borderColor:'#97C459',backgroundColor:'transparent',borderWidth:2,pointRadius:3},
-      {label:'Normal',data:r.map(x=>Math.round(x*840000*0.6)),borderColor:'#2d6a4f',backgroundColor:'transparent',borderWidth:2,pointRadius:3},
-      {label:'Optimista',data:r.map(x=>Math.round(x*889000*0.6)),borderColor:'#1D9E75',backgroundColor:'transparent',borderWidth:2,pointRadius:3},
-      {label:'Meta',data:r.map(()=>5000000),borderColor:'#E24B4A',backgroundColor:'transparent',borderWidth:1.5,pointRadius:0,borderDash:[4,4]}
+      {label:'Mínimo inversionistas',data:r.map(x=>Math.round(x*840000*0.6)),borderColor:'#185FA5',backgroundColor:'transparent',borderWidth:2,pointRadius:3,borderDash:[4,4]},
+      {label:'Real cebú normal',data:r.map(x=>Math.round(x*886000*0.6)),borderColor:'#2d6a4f',backgroundColor:'transparent',borderWidth:2,pointRadius:3},
+      {label:'Real cebú optimista',data:r.map(x=>Math.round(x*940000*0.6)),borderColor:'#1D9E75',backgroundColor:'transparent',borderWidth:2,pointRadius:3},
+      {label:'Meta ₡5M',data:r.map(()=>5000000),borderColor:'#E24B4A',backgroundColor:'transparent',borderWidth:1.5,pointRadius:0,borderDash:[6,3]}
     ]},
     options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.dataset.label+': '+fmt(c.raw)}}},scales:{y:{ticks:{callback:v=>'₡'+Math.round(v/1000000)+'M'}},x:{ticks:{autoSkip:false}}}}
   });
@@ -427,8 +489,8 @@ function initInversion(){
   charts.inversion=new Chart(document.getElementById('chart-inversion'),{
     type:'bar',
     data:{labels:years,datasets:[
-      {label:'Familia',data:reses.map(r=>Math.round(r*840000*12*0.6)),backgroundColor:'#3B6D11',stack:'s'},
-      {label:'Reinversión',data:reses.map(r=>Math.round(r*840000*12*0.4)),backgroundColor:'#BA7517',stack:'s'}
+      {label:'Familia',data:reses.map(r=>Math.round(r*886000*12*0.6)),backgroundColor:'#3B6D11',stack:'s'},
+      {label:'Reinversión',data:reses.map(r=>Math.round(r*886000*12*0.4)),backgroundColor:'#BA7517',stack:'s'}
     ]},
     options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>fmt(c.raw)}}},scales:{x:{stacked:true},y:{stacked:true,ticks:{callback:v=>'₡'+Math.round(v/1000000)+'M'}}}}
   });
@@ -463,26 +525,9 @@ function calcSim(){
   document.getElementById('r-reinv-usd').textContent=fmtU(reinvF);
   const minT=MINS.ma+MINS.yu+MINS.fq;
   const sb=document.getElementById('sim-status');
-  if(famT>=minT){sb.className='status-bar ok';sb.textContent='Meta familiar alcanzada ✓ — todos los mínimos cubiertos';}
-  else{sb.className='status-bar bad';sb.textContent='Falta '+fmt(minT-famT)+' para cubrir los mínimos familiares';}
+  if(famT>=minT){sb.className='status-bar ok';sb.textContent='Meta familiar alcanzada \u2713 \u2014 todos los m\u00ednimos cubiertos';}
+  else{sb.className='status-bar bad';sb.textContent='Falta '+fmt(minT-famT)+' para cubrir los m\u00ednimos familiares';}
   const pMA=0.6;const pR2=(1-pMA)/2;
   const amts={ma:famT*pMA,yu:famT*pR2,fq:famT*pR2};
   document.getElementById('benef-sim').innerHTML=`
-    <div class="benef-row"><div class="avatar">MA</div><div class="b-name">Maynor y Ana<br><span class="b-min">Mínimo ₡3,000,000</span></div><div><div class="b-monto">${fmt(amts.ma)}</div><div class="b-usd">${fmtU(amts.ma)}<span class="b-status ${amts.ma>=MINS.ma?'ok':'bad'}">${amts.ma>=MINS.ma?' ✓':' ✗'}</span></div></div></div>
-    <div class="benef-row"><div class="avatar" style="background:#1D9E75">YU</div><div class="b-name">Yuliana<br><span class="b-min">Mínimo ₡1,000,000</span></div><div><div class="b-monto">${fmt(amts.yu)}</div><div class="b-usd">${fmtU(amts.yu)}<span class="b-status ${amts.yu>=MINS.yu?'ok':'bad'}">${amts.yu>=MINS.yu?' ✓':' ✗'}</span></div></div></div>
-    <div class="benef-row"><div class="avatar" style="background:#5DCAA5;color:#04342C">FQ</div><div class="b-name">Francisco Quiroz<br><span class="b-min">Mínimo ₡1,000,000</span></div><div><div class="b-monto">${fmt(amts.fq)}</div><div class="b-usd">${fmtU(amts.fq)}<span class="b-status ${amts.fq>=MINS.fq?'ok':'bad'}">${amts.fq>=MINS.fq?' ✓':' ✗'}</span></div></div></div>`;
-  if(charts.sim) charts.sim.destroy();
-  const labels=Array.from({length:20},(_,i)=>i+1);
-  charts.sim=new Chart(document.getElementById('chart-sim'),{
-    type:'bar',
-    data:{labels:labels.map(x=>x+' res'),datasets:[
-      {label:'Familia',data:labels.map(x=>Math.round(x*precio*(1-pR))),backgroundColor:'#3B6D11',stack:'s'},
-      {label:'Reinversión',data:labels.map(x=>Math.round(x*precio*pR)),backgroundColor:'#BA7517',stack:'s'},
-      {label:'Meta',data:labels.map(()=>minT),type:'line',borderColor:'#E24B4A',backgroundColor:'transparent',borderWidth:1.5,pointRadius:0,borderDash:[4,4]}
-    ]},
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>fmt(c.raw)}}},scales:{x:{stacked:true,ticks:{autoSkip:true,maxTicksLimit:10}},y:{stacked:true,ticks:{callback:v=>'₡'+Math.round(v/1000000)+'M'}}}}
-  });
-}
-</script>
-</body>
-</html>
+    <div class="benef-row"><div class="avatar">MA</div><div class="b-name">Maynor y Ana<br><span class="b-min">M\u00ednimo \u20a13,000,000</span></div><div><div class="b-monto">${f
